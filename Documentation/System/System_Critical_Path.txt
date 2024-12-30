@@ -1,0 +1,106 @@
+<#
+    =====================================================================
+    File:         System_Critical_Path.txt
+    Folder:       C:\AI\Brain\Documentation\Overview
+    Description:  Document outlining the critical path for system development, detailing dependencies and step-by-step priorities.
+    Author:       Michael G. Lustig
+    Created On:   2024-12-30 10:30:00 UTC
+    Last Updated By: Michael G. Lustig
+    Last Updated: 2024-12-30 10:30:00 UTC
+    Version:      1.0
+    Copyright:    (c) 2024 Editoza, LLC - All rights reserved.
+    =====================================================================
+#>
+
+### System Critical Path
+
+#### Overview
+The critical path identifies the sequence of steps required for the minimum viable product (MVP) and prioritizes foundational elements to ensure functional and scalable system development.
+
+---
+
+### Development Path
+
+1. **Logger**
+   - Establishes logging capabilities across the system.
+   - Handles LogLevels and DisplayLevels for uniform system monitoring.
+
+2. **BaseService**
+   - Core abstraction layer for all services.
+   - Ensures consistent lifecycle management, dependency injection, and error handling.
+
+3. **Authentication (Auth)**
+   - Implements secure user access via OAuth, RBAC, and token-based mechanisms.
+   - Enforces role-based permissions.
+
+4. **IPCMessageQueues**
+   - Manages inter-process communication (IPC) queues.
+   - Ensures reliable, asynchronous communication between system components.
+
+5. **IPCMessaging**
+   - Dynamic routing and processing of IPC messages.
+   - Enables scalable and modular communication.
+
+6. **DynamicContext**
+   - Facilitates context management for workflows and system state.
+   - Integrates with Graph DB for relational context handling.
+
+7. **Handlers (Actions, Messages, Workflows)**
+   - Core components for executing workflows and messages.
+   - Supports data-based (JSON) and code-based (C#/Python) handlers.
+
+8. **MonitorService**
+   - Monitors the health and performance of system services.
+   - Provides real-time metrics and anomaly detection.
+
+9. **ConsoleUI**
+   - Backend interface for system administrators.
+   - Enables service management, monitoring, and debugging.
+
+10. **WebUI**
+    - Frontend user interface for end-users and administrators.
+    - Built using React to ensure a responsive and dynamic experience.
+
+---
+
+### Dependencies and Sequence
+
+- **Logger**: Prerequisite for error handling and monitoring.
+- **BaseService**: Foundation for all services.
+- **Auth**: Depends on BaseService for lifecycle management.
+- **IPCMessageQueues**: Requires BaseService for instantiation.
+- **IPCMessaging**: Builds on IPCMessageQueues for dynamic routing.
+- **DynamicContext**: Relies on IPCMessaging for context propagation.
+- **Handlers**: Uses DynamicContext to resolve dependencies during execution.
+- **MonitorService**: Requires Logger and BaseService for operational insights.
+- **ConsoleUI**: Built atop MonitorService and Handlers.
+- **WebUI**: Final layer dependent on ConsoleUI for backend communication.
+
+---
+
+### Key Milestones
+
+1. **Phase 1: Foundation**
+   - Logger
+   - BaseService
+   - Auth
+
+2. **Phase 2: Communication**
+   - IPCMessageQueues
+   - IPCMessaging
+
+3. **Phase 3: Execution and Monitoring**
+   - DynamicContext
+   - Handlers
+   - MonitorService
+
+4. **Phase 4: Interfaces**
+   - ConsoleUI
+   - WebUI
+
+---
+
+### Conclusion
+This critical path ensures a structured approach to development, aligning dependencies with functional milestones to deliver a robust MVP while maintaining scalability for future enhancements.
+
+#End of File

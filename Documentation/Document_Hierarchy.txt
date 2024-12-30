@@ -1,0 +1,141 @@
+/*
+ * =====================================================================
+ * File:         Document_Hierarchy.txt
+ * Folder:       Documentation
+ * Description:  Documentation on the folders and filenames for documentation
+ * Author:       Michael G. Lustig
+ * Created On:   2024-12-30 22:00:00 UTC
+ * Updated By:   Michael G. Lustig
+ * Updated On:   2024-12-30 22:00:00 UTC
+ * Version:      1.0
+ * Copyright:    (c) 2024 Editoza, LLC - All rights reserved.
+ * =====================================================================
+ */
+
+Documentation/
+│
+├── Backend/
+│   ├── Core/
+│   │   ├── AI_Driven_Workflow_Generation.txt
+│   │   ├── AI_Workflow_Generation.txt
+│   │   ├── Backend_Core_AnomalyDetection.txt
+│   │   ├── Backend_Core_Attributes.txt
+│   │   ├── Backend_Core_Auth.txt
+│   │   ├── Backend_Core_Context.txt
+│   │   ├── Backend_Core_ErrorHandling.txt
+│   │   ├── Backend_Core_Handler.txt
+│   │   ├── Backend_Core_LoadBalancer.txt
+│   │   ├── Backend_Core_Messages.txt
+│   │   ├── Backend_Core_Monitor.txt
+│   │   ├── Backend_Core_Queuing.txt
+│   │   ├── Backend_Core_QuotaManager.txt
+│   │   ├── Backend_Core_Routing.txt
+│   │   ├── Backend_Core_Templates.txt
+│   │   ├── Backend_Core_Workflows.txt
+│   │   ├── Backend_Services_QueueManager.txt
+│   │   ├── Context_Integration_with_External_Services.txt
+│   │   ├── Dynamic_Context_Management.txt
+│   │   ├── Dynamic_Routing_Tables.txt
+│   │   ├── Graph_Context_Management_with_Neo4j.txt
+│   │   ├── LoadBalancer_Design.txt
+│   │   ├── Queue_Management.txt
+│   │   ├── Queuing_Mechanism.txt
+│   │   ├── QuotaManager_Overview.txt
+│   │   ├── RBAC_Throttling.txt
+│   │   ├── RBAC_Throttling_and_Quota_Management.txt
+│   │   ├── Speculative_Workflow_Support.txt
+│   │   ├── Workflow_Validation_and_Security.txt
+│   │
+│   ├── Extensions/
+│   │   ├── Backend_Extensions_CustomWorkflows.txt
+│   │   ├── Backend_Extensions_Handlers.txt
+│   │   ├── Backend_Extensions_Plugins.txt
+│   │   ├── Backend_Extensions_Transformers.txt
+│   │   ├── Context_Integration_with_External_Services.txt
+│   │
+│   ├── Libraries/
+│   │   ├── Backend_Libraries_Crypto.txt
+│   │   ├── Backend_Libraries_Storage.txt
+│   │   ├── Backend_Libraries_Utils.txt
+│   │   ├── Graph_Context_Management_with_Neo4j.txt
+│   │
+│   ├── Services/
+│       ├── Backend_Services_ActionService.txt
+│       ├── Backend_Services_Logger.txt
+│       ├── Backend_Services_Manager.txt
+│       ├── Backend_Services_MessageService.txt
+│       ├── Backend_Services_Monitor.txt
+│       ├── Backend_Services_QuotaService.txt
+│       ├── Backend_Services_Simulator.txt
+│       ├── Backend_Services_TestService.txt
+│       ├── Backend_Services_WorkflowService.txt
+│       ├── Backend_Service_Error_Handling_Service.txt
+│
+├── Config/
+│   ├── Config_Overview.txt
+│   ├── Actions/
+│   │   ├── Docs_Config_Actions.txt
+│   │
+│   ├── Auth/
+│   │   ├── Docs_Config_Auth.txt
+│   │
+│   ├── Messages/
+│   │   ├── Docs_Config_Messages.txt
+│   │
+│   ├── Workflows/
+│       ├── Docs_Config_Workflows.txt
+│
+├── Frontend/
+│   ├── ConsoleUI/
+│   │   ├── Docs_Frontend_ConsoleUI.txt
+│   │
+│   ├── Shared/
+│   │   ├── Docs_Frontend_Shared.txt
+│   │
+│   ├── WebUI/
+│       ├── Docs_Frontend_WebUI.txt
+│
+├── Overview/
+│   ├── Backend_Core_Actions.txt
+│   ├── Backend_Core_Overview.txt
+│   ├── Backend_Overview.txt
+│   ├── Backend_Services_Overview.txt
+│   ├── Config_Overview.txt
+│   ├── Cost_Tracking_and_Tokens.txt
+│   ├── Folder_Structure.txt
+│   ├── Folder_Tree_Hierarchy.txt
+│   ├── Frontend_Overview.txt
+│   ├── Namespace_Conventions.txt
+│   ├── Namespace_Hierarchy.txt
+│   ├── README.md
+│   ├── System_Overview.txt
+│
+├── System/
+│   ├── Attribute_Table_Sharing.txt
+│   ├── System_Initialization_and_Registration.txt
+│
+├── Tests/
+│   ├── EndToEnd/
+│   │   ├── Tests_EndToEnd.txt
+│   │
+│   ├── Functional/
+│   │   ├── Tests_Functional.txt
+│   │
+│   ├── Integration/
+│   │   ├── Tests_Integration.txt
+│   │
+│   ├── Unit/
+│       ├── Tests_Unit.txt
+│
+├── Tools/
+│   ├── Automation/
+│   │   ├── Docs_Tools_Automation.txt
+│   │
+│   ├── Deployment/
+│   │   ├── Docs_Tools_Deployment.txt
+│   │
+│   ├── Git/
+│   │   ├── Git_Setup.txt
+│   │
+│   ├── Testing/
+│       ├── Docs_Tools_Testing.txt

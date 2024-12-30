@@ -1,0 +1,274 @@
+ Volume in drive C is EDITOZA
+ Volume Serial Number is 9488-9499
+
+ Directory of C:\AI\Brain\Documentation
+
+12/30/2024  02:00 PM    <DIR>          .
+12/30/2024  01:56 PM    <DIR>          ..
+12/29/2024  11:02 AM    <DIR>          Backend
+12/29/2024  01:45 PM    <DIR>          Config
+12/29/2024  11:02 AM    <DIR>          Frontend
+12/30/2024  09:52 AM    <DIR>          Overview
+12/30/2024  11:15 AM    <DIR>          System
+12/30/2024  01:51 PM    <DIR>          Tests
+12/30/2024  07:28 AM    <DIR>          Tools
+12/30/2024  02:00 PM                 0 _filenames.txt
+               1 File(s)              0 bytes
+
+ Directory of C:\AI\Brain\Documentation\Backend
+
+12/29/2024  11:02 AM    <DIR>          .
+12/30/2024  02:00 PM    <DIR>          ..
+12/30/2024  10:03 AM    <DIR>          Core
+12/30/2024  10:19 AM    <DIR>          Extensions
+12/30/2024  10:22 AM    <DIR>          Libraries
+12/30/2024  10:45 AM    <DIR>          Services
+               0 File(s)              0 bytes
+
+ Directory of C:\AI\Brain\Documentation\Backend\Core
+
+12/30/2024  10:03 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+12/29/2024  05:06 PM             5,681 AI_Driven_Workflow_Generation.txt
+12/29/2024  05:12 PM             4,409 AI_Workflow_Generation.txt
+12/29/2024  04:46 PM             4,636 Backend_Core_AnomalyDetection.txt
+12/29/2024  04:21 PM             4,277 Backend_Core_Attributes.txt
+12/30/2024  07:41 AM             3,018 Backend_Core_Auth.txt
+12/29/2024  04:22 PM             4,762 Backend_Core_Context.txt
+12/30/2024  07:49 AM             3,811 Backend_Core_ErrorHandling.txt
+12/29/2024  04:04 PM             4,547 Backend_Core_Handler.txt
+12/30/2024  08:01 AM             4,753 Backend_Core_LoadBalancer.txt
+12/29/2024  04:54 PM             3,678 Backend_Core_Messages.txt
+12/30/2024  07:55 AM            12,318 Backend_Core_Monitor.txt
+12/30/2024  07:43 AM             3,445 Backend_Core_Queuing.txt
+12/30/2024  07:59 AM             5,592 Backend_Core_QuotaManager.txt
+12/29/2024  04:08 PM             4,464 Backend_Core_Routing.txt
+12/30/2024  10:06 AM             2,960 Backend_Core_Templates.txt
+12/29/2024  04:59 PM             5,106 Backend_Core_Workflows.txt
+12/30/2024  07:52 AM             4,314 Backend_Services_QueueManager.txt
+12/29/2024  05:02 PM             4,211 Context_Integration_with_External_Services.txt
+12/29/2024  03:52 PM             3,928 Dynamic_Context_Management.txt
+12/29/2024  05:08 PM             4,993 Dynamic_Routing_Tables.txt
+12/29/2024  05:18 PM             4,517 Graph_Context_Management_with_Neo4j.txt
+12/29/2024  05:10 PM             4,512 LoadBalancer_Design.txt
+12/30/2024  07:39 AM             2,903 Queue_Management.txt
+12/30/2024  07:33 AM             3,280 Queuing_Mechanism.txt
+12/29/2024  05:10 PM             4,572 QuotaManager_Overview.txt
+12/30/2024  07:34 AM             3,065 RBAC_Throttling.txt
+12/29/2024  05:13 PM             4,860 RBAC_Throttling_and_Quota_Management.txt
+12/29/2024  05:15 PM             5,669 Speculative_Workflow_Support.txt
+12/29/2024  05:05 PM             4,753 Workflow_Validation_and_Security.txt
+              29 File(s)        133,034 bytes
+
+ Directory of C:\AI\Brain\Documentation\Backend\Extensions
+
+12/30/2024  10:19 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+12/30/2024  10:17 AM             4,116 Backend_Extensions_CustomWorkflows.txt
+12/30/2024  10:18 AM             4,013 Backend_Extensions_Handlers.txt
+12/30/2024  10:08 AM             3,717 Backend_Extensions_Plugins.txt.txt
+12/30/2024  10:19 AM             4,016 Backend_Extensions_Transformers.txt
+12/29/2024  01:39 PM             2,419 Context_Integration_with_External_Services.txt
+               5 File(s)         18,281 bytes
+
+ Directory of C:\AI\Brain\Documentation\Backend\Libraries
+
+12/30/2024  10:22 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+12/30/2024  10:21 AM             3,988 Backend_Libraries_Crypto.txt
+12/30/2024  10:43 AM             4,800 Backend_Libraries_Storage.txt
+12/30/2024  10:22 AM             4,200 Backend_Libraries_Utils.txt
+12/29/2024  01:40 PM             4,524 Graph_Context_Management_with_Neo4j.txt
+               4 File(s)         17,512 bytes
+
+ Directory of C:\AI\Brain\Documentation\Backend\Services
+
+12/30/2024  10:45 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+12/30/2024  08:31 AM             3,370 Backend_Services_ActionService.txt
+12/30/2024  08:10 AM             3,486 Backend_Services_Logger.txt
+12/30/2024  08:36 AM             3,508 Backend_Services_Manager.txt
+12/30/2024  08:34 AM             3,432 Backend_Services_MessageService.txt
+12/30/2024  08:16 AM             3,703 Backend_Services_Monitor.txt
+12/30/2024  10:45 AM             4,452 Backend_Services_QuotaService.txt
+12/29/2024  03:58 PM             3,586 Backend_Services_Simulator.txt
+12/30/2024  08:30 AM             3,519 Backend_Services_TestService.txt
+12/30/2024  08:35 AM             3,452 Backend_Services_WorkflowService.txt
+12/30/2024  08:38 AM             2,501 Backend_Service_Error_Handling_Service.txt
+              10 File(s)         35,009 bytes
+
+ Directory of C:\AI\Brain\Documentation\Config
+
+12/29/2024  01:45 PM    <DIR>          .
+12/30/2024  02:00 PM    <DIR>          ..
+12/30/2024  11:44 AM    <DIR>          Actions
+12/30/2024  01:24 PM    <DIR>          Auth
+12/29/2024  01:46 PM             1,904 Config_Overview.txt
+12/30/2024  01:12 PM    <DIR>          Messages
+12/30/2024  01:20 PM    <DIR>          Workflows
+               1 File(s)          1,904 bytes
+
+ Directory of C:\AI\Brain\Documentation\Config\Actions
+
+12/30/2024  11:44 AM    <DIR>          .
+12/29/2024  01:45 PM    <DIR>          ..
+12/30/2024  11:48 AM             5,069 Docs_Config_Actions.txt
+               1 File(s)          5,069 bytes
+
+ Directory of C:\AI\Brain\Documentation\Config\Auth
+
+12/30/2024  01:24 PM    <DIR>          .
+12/29/2024  01:45 PM    <DIR>          ..
+12/30/2024  01:25 PM             4,014 Docs_Config_Auth.txt
+               1 File(s)          4,014 bytes
+
+ Directory of C:\AI\Brain\Documentation\Config\Messages
+
+12/30/2024  01:12 PM    <DIR>          .
+12/29/2024  01:45 PM    <DIR>          ..
+12/30/2024  01:18 PM             3,698 Docs_Config_Messages.txt
+               1 File(s)          3,698 bytes
+
+ Directory of C:\AI\Brain\Documentation\Config\Workflows
+
+12/30/2024  01:20 PM    <DIR>          .
+12/29/2024  01:45 PM    <DIR>          ..
+12/30/2024  01:25 PM             4,284 Docs_Config_Workflows.txt
+               1 File(s)          4,284 bytes
+
+ Directory of C:\AI\Brain\Documentation\Frontend
+
+12/29/2024  11:02 AM    <DIR>          .
+12/30/2024  02:00 PM    <DIR>          ..
+12/30/2024  11:31 AM    <DIR>          ConsoleUI
+12/30/2024  11:35 AM    <DIR>          Shared
+12/30/2024  11:34 AM    <DIR>          WebUI
+               0 File(s)              0 bytes
+
+ Directory of C:\AI\Brain\Documentation\Frontend\ConsoleUI
+
+12/30/2024  11:31 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+12/30/2024  11:33 AM             4,758 Docs_Frontend_ConsoleUI.txt
+               1 File(s)          4,758 bytes
+
+ Directory of C:\AI\Brain\Documentation\Frontend\Shared
+
+12/30/2024  11:35 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+12/30/2024  11:36 AM             4,552 Docs_Frontend_Shared.txt
+               1 File(s)          4,552 bytes
+
+ Directory of C:\AI\Brain\Documentation\Frontend\WebUI
+
+12/30/2024  11:34 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+12/30/2024  11:35 AM             4,941 Docs_Frontend_WebUI.txt
+               1 File(s)          4,941 bytes
+
+ Directory of C:\AI\Brain\Documentation\Overview
+
+12/30/2024  09:52 AM    <DIR>          .
+12/30/2024  02:00 PM    <DIR>          ..
+12/29/2024  01:02 PM             3,903 Backend_Core_Actions.txt
+12/29/2024  03:32 PM             3,283 Backend_Core_Overview.txt
+12/29/2024  01:02 PM             3,669 Backend_Overview.txt
+12/29/2024  03:32 PM             3,740 Backend_Services_Overview.txt
+12/29/2024  03:14 PM             3,283 Config_Overview.txt
+12/29/2024  04:46 PM             3,570 Cost_Tracking_and_Tokens.txt
+12/29/2024  01:19 PM             2,954 Folder_Structure.txt
+12/30/2024  09:54 AM             2,261 Folder_Tree_Hierarchy.txt
+12/29/2024  01:07 PM             3,552 Frontend_Overview.txt
+12/29/2024  01:41 PM             2,804 Namespace_Conventions.txt
+12/29/2024  12:50 PM             6,787 Namespace_Hierarchy.txt
+12/29/2024  03:09 PM             4,423 README.md
+12/29/2024  01:26 PM             3,160 System_Overview.txt
+              13 File(s)         47,389 bytes
+
+ Directory of C:\AI\Brain\Documentation\System
+
+12/30/2024  11:15 AM    <DIR>          .
+12/30/2024  02:00 PM    <DIR>          ..
+12/30/2024  11:31 AM             5,580 Attribute_Table_Sharing.txt
+12/30/2024  10:43 AM             4,246 System_Initialization_and_Registration.txt
+               2 File(s)          9,826 bytes
+
+ Directory of C:\AI\Brain\Documentation\Tests
+
+12/30/2024  01:51 PM    <DIR>          .
+12/30/2024  02:00 PM    <DIR>          ..
+12/30/2024  01:54 PM    <DIR>          EndToEnd
+12/30/2024  01:50 PM    <DIR>          Functional
+12/30/2024  01:52 PM    <DIR>          Integration
+12/30/2024  01:53 PM    <DIR>          Unit
+               0 File(s)              0 bytes
+
+ Directory of C:\AI\Brain\Documentation\Tests\EndToEnd
+
+12/30/2024  01:54 PM    <DIR>          .
+12/30/2024  01:51 PM    <DIR>          ..
+12/30/2024  01:55 PM             3,062 Tests_EndToEnd.txt
+               1 File(s)          3,062 bytes
+
+ Directory of C:\AI\Brain\Documentation\Tests\Functional
+
+12/30/2024  01:50 PM    <DIR>          .
+12/30/2024  01:51 PM    <DIR>          ..
+12/30/2024  01:51 PM             2,892 Tests_Functional.txt
+               1 File(s)          2,892 bytes
+
+ Directory of C:\AI\Brain\Documentation\Tests\Integration
+
+12/30/2024  01:52 PM    <DIR>          .
+12/30/2024  01:51 PM    <DIR>          ..
+12/30/2024  01:52 PM             3,094 Tests_Integration.txt
+               1 File(s)          3,094 bytes
+
+ Directory of C:\AI\Brain\Documentation\Tests\Unit
+
+12/30/2024  01:53 PM    <DIR>          .
+12/30/2024  01:51 PM    <DIR>          ..
+12/30/2024  01:54 PM             2,906 Tests_Unit.txt
+               1 File(s)          2,906 bytes
+
+ Directory of C:\AI\Brain\Documentation\Tools
+
+12/30/2024  07:28 AM    <DIR>          .
+12/30/2024  02:00 PM    <DIR>          ..
+12/30/2024  01:31 PM    <DIR>          Automation
+12/30/2024  01:26 PM    <DIR>          Deployment
+12/30/2024  07:28 AM    <DIR>          Git
+12/30/2024  01:32 PM    <DIR>          Testing
+               0 File(s)              0 bytes
+
+ Directory of C:\AI\Brain\Documentation\Tools\Automation
+
+12/30/2024  01:31 PM    <DIR>          .
+12/30/2024  07:28 AM    <DIR>          ..
+12/30/2024  01:31 PM             3,890 Docs_Tools_Automation.txt
+               1 File(s)          3,890 bytes
+
+ Directory of C:\AI\Brain\Documentation\Tools\Deployment
+
+12/30/2024  01:26 PM    <DIR>          .
+12/30/2024  07:28 AM    <DIR>          ..
+12/30/2024  01:27 PM             3,950 Docs_Tools_Deployment.txt
+               1 File(s)          3,950 bytes
+
+ Directory of C:\AI\Brain\Documentation\Tools\Git
+
+12/30/2024  07:28 AM    <DIR>          .
+12/30/2024  07:28 AM    <DIR>          ..
+12/30/2024  07:28 AM                 0 Git_Setup.txt
+               1 File(s)              0 bytes
+
+ Directory of C:\AI\Brain\Documentation\Tools\Testing
+
+12/30/2024  01:32 PM    <DIR>          .
+12/30/2024  07:28 AM    <DIR>          ..
+12/30/2024  01:33 PM             3,700 Docs_Tools_Testing.txt
+               1 File(s)          3,700 bytes
+
+     Total Files Listed:
+              80 File(s)        317,765 bytes
+              80 Dir(s)  164,387,786,752 bytes free

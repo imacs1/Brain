@@ -1,0 +1,101 @@
+/*
+ * =====================================================================
+ * File:         Backend_Queue_Management.txt
+ * Folder:       Documentation/Backend/Services
+ * Description:  Consolidated documentation of Queue Management and Queue Manager 
+ *               in Project Brain. Covers queuing mechanisms, priority handling, 
+ *               dynamic allocation, and integrations.
+ * Author:       Michael G. Lustig
+ * Created On:   2024-12-30 21:00:00 UTC
+ * Last Updated By: Michael G. Lustig
+ * Last Updated: 2024-12-30 21:00:00 UTC
+ * Version:      1.0
+ * Copyright:    (c) 2024 Editoza, LLC - All rights reserved.
+ * =====================================================================
+ */
+
+# Queue Management and Queue Manager Overview
+
+## Core Features
+
+### 1. Priority-Based Queuing
+- Messages are classified into four levels:
+  - **Override**: Immediate processing with 100% resource allocation.
+  - **High**: 60% of remaining resources.
+  - **Medium**: 30% of remaining resources.
+  - **Low**: 10% of remaining resources.
+- Weighted algorithms ensure consistent throughput across all priorities.
+
+### 2. Dynamic Resource Allocation
+- Resources dynamically adjust based on queue metrics and system health.
+- Override tasks always take precedence, while remaining tasks follow a 6:3:1 ratio.
+
+### 3. Fault Tolerance
+- Failed messages are retried based on retry policies.
+- Persistent failures move to a dead-letter queue for inspection.
+
+### 4. Queue Isolation and Monitoring
+- Priority queues are isolated to prevent blocking.
+- Metrics such as queue lengths, throughput, and error rates are monitored.
+
+### 5. RBAC and Quota Integration
+- Ensures user compliance with roles, entitlements, and quotas.
+- Integrates with Quota Manager for fine-grained throttling.
+
+---
+
+## Queue Manager Responsibilities
+
+1. **Message Prioritization**:
+   - Classifies and processes messages based on priority definitions.
+
+2. **Dynamic Scaling**:
+   - Allocates processing capacity dynamically based on workload.
+
+3. **Dead-Letter Handling**:
+   - Provides inspection, retry, and deletion for unprocessable messages.
+
+4. **Integration with Load Balancer**:
+   - Ensures optimal message routing to instances.
+
+5. **Monitoring and Analytics**:
+   - Generates metrics for dashboards and real-time alerts.
+
+---
+
+## Example JSON Configuration
+
+{
+    "queue_manager": {
+        "priority_ratios": {
+            "high": 6,
+            "medium": 3,
+            "low": 1
+        },
+        "retry_policy": {
+            "max_retries": 5,
+            "retry_interval_ms": 1000
+        },
+        "dead_letter_queue": {
+            "enabled": true,
+            "retention_period_days": 7
+        }
+    }
+}
+
+---
+
+## Future Enhancements
+1. **Predictive Analytics**:
+   - Use AI for queue load balancing and optimization.
+
+2. **Advanced Error Recovery**:
+   - Automated workflows to handle complex dead-letter issues.
+
+3. **External Queuing Integration**:
+   - Support distributed systems like RabbitMQ or Kafka.
+
+4. **Enhanced Monitoring Dashboards**:
+   - Real-time visualizations for queue and performance metrics.
+
+#End of File

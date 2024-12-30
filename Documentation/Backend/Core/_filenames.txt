@@ -1,0 +1,26 @@
+ Volume in drive C is EDITOZA
+ Volume Serial Number is 9488-9499
+
+ Directory of C:\AI\Brain\Documentation\Backend\Core
+
+12/30/2024  02:41 PM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+12/29/2024  04:46 PM             4,636 Backend_Core_AnomalyDetection.txt
+12/29/2024  04:21 PM             4,277 Backend_Core_Attributes.txt
+12/30/2024  07:41 AM             3,018 Backend_Core_Auth.txt
+12/29/2024  04:22 PM             4,762 Backend_Core_Context.txt
+12/30/2024  02:16 PM             3,930 Backend_Core_Dynamic_Context.txt
+12/30/2024  07:49 AM             3,811 Backend_Core_ErrorHandling.txt
+12/29/2024  05:18 PM             4,517 Backend_Core_Graph_Context_Management_with_Neo4j.txt
+12/29/2024  04:04 PM             4,547 Backend_Core_Handler.txt
+12/30/2024  02:21 PM             5,106 Backend_Core_LoadBalancer.txt
+12/29/2024  04:54 PM             3,678 Backend_Core_Messages.txt
+12/30/2024  07:55 AM            12,318 Backend_Core_Monitor.txt
+12/30/2024  02:31 PM             3,221 Backend_Core_Queue_Management.txt
+12/30/2024  02:39 PM             4,134 Backend_Core_Quota_and_RBAC_Management.txt
+12/30/2024  02:17 PM             3,814 Backend_Core_Routing.txt
+12/30/2024  10:06 AM             2,960 Backend_Core_Templates.txt
+12/30/2024  02:25 PM             5,363 Backend_Core_Workflows.txt
+12/30/2024  02:41 PM                 0 _filenames.txt
+              17 File(s)         74,092 bytes
+               2 Dir(s)  164,383,789,056 bytes free

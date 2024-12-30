@@ -1,6 +1,6 @@
 /*
  * =====================================================================
- * File:         Backend_Core_Messages.txt
+ * File:         Backend_Core_IPC_Messaging.txt
  * Folder:       Documentation/Backend/Core
  * Description:  Documentation on message handling within Project Brain,
  *               including structure, processing, and routing mechanisms.
