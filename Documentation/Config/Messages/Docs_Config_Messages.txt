@@ -1,0 +1,117 @@
+/*
+ * =====================================================================
+ * File:         Docs_Config_Messages.txt
+ * Folder:       C:\AI\Brain\Documentation\Config\Messages
+ * Description:  Documentation for the Messages configuration, detailing
+ *               structure, purpose, and integration within the system.
+ * Author:       Michael G. Lustig
+ * Created On:   2024-12-30 15:30:00 UTC
+ * Version:      1.0
+ * Copyright:    (c) 2024 Editoza, LLC - All rights reserved.
+ * =====================================================================
+ */
+
+# Config: Messages
+
+## Overview
+Messages facilitate communication across the Brain system by encapsulating data exchanged between services, workflows, and users. The configuration defines the structure, routing, and handling of messages, stored securely in an encrypted database.
+
+---
+
+## Configuration Structure
+Each Message configuration is stored as a JSON file in the database and dynamically registered during runtime.
+
+```json
+{
+  "name": "MSG_TRANSLATE",
+  "description": "Request to translate text to a specified language.",
+  "parameters": {
+    "sourceLanguage": "string",
+    "targetLanguage": "string",
+    "text": "string"
+  },
+  "handlers": ["TranslationService", "FallbackHandler"],
+  "priority": "high",
+  "displayLevel": "Information"
+}
+## Fields:
+1. name:
+  - A unique identifier for the message type.
+
+2. description:
+  - Explains the purpose and usage of the message.
+
+3. parameters:
+  - Specifies the required inputs for the message, including data types.
+
+4. handlers:
+  - Lists the services or handlers responsible for processing the message.
+
+5. priority:
+  - Indicates the message’s importance (e.g., high, medium, low).
+
+6. displayLevel:
+  - Determines how the message is represented in logs and the ConsoleUI.
+
+## Integration
+  - Messages are dynamically registered and routed at runtime based on the configuration.
+
+_registeredMessages = {
+    "MSG_TRANSLATE": "{guid}"
+}
+
+1. Dynamic Registration:
+  - Messages are discovered in the database, decrypted, and registered as endpoints for execution.
+
+2. Routing:
+  - Based on the handlers field, messages are directed to the appropriate services.
+
+## Example Use Cases
+1. Text Translation:
+  - A MSG_TRANSLATE message triggers the TranslationService to process the request.
+
+2. Notification Delivery:
+  - A MSG_NOTIFY message routes to the NotificationService, sending alerts to users.
+
+3. Workflow Execution:
+  - Messages can initiate workflows, acting as triggers for action chains.
+
+## Error Handling
+
+1. Invalid Configuration:
+  - Improperly defined messages are logged during startup with a Critical DisplayLevel.
+
+2. Failed Delivery:
+  - Failed message delivery triggers retries or fallback mechanisms based on priority and handler availability.
+
+## Testing
+
+1. Unit Tests:
+  - Validate individual message configurations for correctness.
+
+2. Integration Tests:
+  - Ensure messages are correctly routed and processed by designated handlers.
+
+3. Load Tests:
+  - Assess system performance under high message throughput.
+
+## Security
+
+1. Encryption:
+  - All messages are stored encrypted and decrypted only in memory at runtime.
+
+2. Access Control:
+  - RBAC ensures only authorized services can send or handle specific messages.
+
+## Future Enhancements
+
+1. Dynamic Prioritization:
+  - Allow real-time updates to message priorities based on system load.
+
+2. Message Versioning:
+  - Support multiple versions of messages for backward compatibility.
+
+3. Real-Time Monitoring:
+  - Enable live tracking of message routing and handling.
+
+#End of File

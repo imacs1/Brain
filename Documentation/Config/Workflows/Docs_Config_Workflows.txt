@@ -1,0 +1,117 @@
+/*
+ * =====================================================================
+ * File:         Docs_Config_Workflows.txt
+ * Folder:       C:\AI\Brain\Documentation\Config\Workflows
+ * Description:  Documentation for Workflows configuration, outlining
+ *               structure, use cases, and integration in the system.
+ * Author:       Michael G. Lustig
+ * Created On:   2024-12-30 16:00:00 UTC
+ * Version:      1.1
+ * Copyright:    (c) 2024 Editoza, LLC - All rights reserved.
+ * =====================================================================
+ */
+
+# Config: Workflows
+
+## Overview
+Workflows are a central component of the Brain system, enabling dynamic task execution and content generation through a series of pre-defined and user-driven steps. Stored in an encrypted database, workflows can also serve as templates (e.g., `WF_BUSINESS_PLAN.json`, `WF_NOVEL.json`). Workflows can call other workflows as actions, creating modular and reusable structures.
+
+---
+
+## Configuration Structure
+Each Workflow configuration is defined in JSON format and dynamically registered at runtime.
+
+```json
+{
+  "name": "WF_BUSINESS_PLAN",
+  "description": "Generates a comprehensive business plan based on user inputs.",
+  "steps": [
+    {
+      "action": "COLLECT_USER_INPUT",
+      "parameters": {
+        "fields": ["businessName", "targetMarket", "goals"]
+      }
+    },
+    {
+      "action": "WF_MARKET_ANALYSIS",
+      "parameters": {}
+    },
+    {
+      "action": "ASSEMBLE_DOCUMENT",
+      "parameters": {
+        "sections": ["executiveSummary", "marketAnalysis", "financialPlan"]
+      }
+    }
+  ],
+  "version": "1.0",
+  "displayLevel": "Information"
+}
+Fields:
+- **name**:  
+  A unique identifier for the Workflow.  
+- **description**:  
+  Explains the purpose of the Workflow.  
+- **steps**:  
+  A sequence of actions to execute, each with its associated parameters. Steps can include other workflows as actions.  
+- **version**:  
+  Tracks the Workflow’s version for auditing and backward compatibility.  
+- **displayLevel**:  
+  Indicates the DisplayLevel for logging and UI representation.  
+
+Integration:  
+Workflows are dynamically registered and accessible through APIs and the UI.  
+
+- **Dynamic Registration**:  
+  Workflows are loaded from the database during startup and decrypted for use in memory.  
+
+- **Execution**:  
+  Workflows are executed step-by-step, with each step invoking a corresponding Action or Workflow.  
+
+- **Modularity**:  
+  Workflows can call other workflows as an action, enabling nested execution and reusability.  
+
+Example Use Cases:  
+- **Business Plan Creation**:  
+  The `WF_BUSINESS_PLAN` Workflow generates a detailed business plan from user inputs and calls `WF_MARKET_ANALYSIS` to perform a market analysis.  
+
+- **Story Writing**:  
+  The `WF_NOVEL` Workflow helps users structure and draft a novel chapter-by-chapter.  
+
+- **TV Series Planning**:  
+  The `WF_TV_SERIES` Workflow assists in creating detailed plans for episodes in a series, calling workflows for character development or scene planning.  
+
+Error Handling:  
+- **Configuration Errors**:  
+  Invalid Workflow configurations are logged as `Critical` during startup.  
+
+- **Execution Failures**:  
+  Failures during Workflow execution are logged and trigger fallback mechanisms.  
+
+Testing:  
+- **Unit Tests**:  
+  Validate individual Workflow configurations for accuracy.  
+
+- **Integration Tests**:  
+  Ensure Workflows interact seamlessly with Actions, Messages, and nested Workflows.  
+
+- **Functional Tests**:  
+  Test complete execution of Workflows to verify expected outcomes.  
+
+Security:  
+- **Encryption**:  
+  All Workflow configurations are encrypted in storage and decrypted only in memory.  
+
+- **Access Control**:  
+  RBAC ensures only authorized users can execute or modify specific Workflows.  
+
+Future Enhancements:  
+- **Live Workflow Editing**:  
+  Allow admins to edit Workflow steps dynamically through the WebUI.  
+
+- **Versioning**:  
+  Enable multiple versions of a Workflow to support rollback or upgrade scenarios.  
+
+- **Advanced Analytics**:  
+  Provide detailed execution logs and insights for optimization.  
+
+#End of File

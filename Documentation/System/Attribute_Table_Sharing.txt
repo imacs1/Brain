@@ -1,0 +1,136 @@
+/*
+ * =====================================================================
+ * File:         Attribute_Table_Sharing.txt
+ * Folder:       C:\AI\Brain\Documentation\System
+ * Description:  Documentation for the attribute table sharing mechanism,
+ *               detailing instance types, sharing rules, name conflict
+ *               handling, and benefits.
+ * Author:       Michael G. Lustig
+ * Created On:   2024-12-30 12:30:00 UTC
+ * Version:      1.1
+ * Copyright:    (c) 2024 Editoza, LLC - All rights reserved.
+ * =====================================================================
+ */
+
+# Attribute Table Sharing Mechanism
+
+## Overview
+This document outlines the rules and mechanisms for sharing attribute tables (Actions, Messages, Workflows) between instances of the system. It includes handling name conflicts, overrides, and the accessibility of attributes in workflows, all designed to improve scalability, flexibility, and operational efficiency.
+
+---
+
+## Key Concepts
+1. **Attribute Tables**:
+   - Collections of registered Actions, Messages, and Workflows.
+   - Enable routing and execution of tasks within the system.
+
+2. **Instance Types**:
+   - **Root Instance**:
+     - Managed by the system owner (e.g., Editoza, LLC).
+     - Shares attribute tables with other root instances bi-directionally.
+   - **Client Instance (BRAIN_CUSTOM_CLIENT_INSTANCE)**:
+     - Instances running on client infrastructure.
+     - Custom handlers are shared based on RBAC rules.
+     - Root instances do not share attribute tables with client instances but accept tables from them.
+
+---
+
+## Sharing Rules
+### 1. **Root Instances**:
+   - **Bi-Directional Sharing**:
+     - Attribute tables are shared between root instances to ensure consistency and collective capability expansion.
+     - Only missing or newer attribute handlers are shared between root instances, reducing redundancy.
+
+### 2. **Client Instances**:
+   - **One-Way Sharing**:
+     - Attribute tables from client instances are accepted by the root instance, but root instance tables are not shared with the client.
+   - **RBAC Enforcement**:
+     - Custom handlers and workflows from the client instance are accessible based on role-based access control.
+   - **Handler Overrides**:
+     - Client instances can override existing attribute handlers if request parameters and response match.
+     - Example: Using `MSG_TRANSLATE` from the client instance instead of the root instance.
+
+---
+
+## Name Conflict Handling
+1. **Root Instances**:
+   - When two root instances have nearly identical attribute handlers:
+     - The system shares only the missing or newer handlers.
+     - Ensures external handler compatibility while avoiding redundancy.
+
+2. **Client Instances**:
+   - Overrides are allowed if request parameters and responses are identical.
+   - Example:
+     - Client `MSG_TRANSLATE` can replace system `MSG_TRANSLATE`.
+
+3. **Custom Handlers**:
+   - Clients can define entirely custom handlers with unique parameters and responses.
+   - Example:
+     - `MSG_TRANSLATE_CLIENT` can be defined to accommodate specific client needs.
+
+---
+
+## Attribute Accessibility in Workflows
+- Attributes such as Actions are accessible as workflow steps.
+- Example:
+  - A workflow `WF_BUSINESS_PLAN` can invoke an action `ACTION_CREATE_SECTION`.
+
+---
+
+## Benefits
+1. **Scalability**:
+   - Sharing tables between root instances allows the system to scale horizontally by distributing tasks and expanding capabilities.
+
+2. **Flexibility**:
+   - One-way sharing with client instances ensures secure integration while maintaining system integrity.
+   - Dynamic overrides and custom handler definitions enhance adaptability.
+
+3. **Security**:
+   - RBAC-driven access for client handlers prevents unauthorized usage or exposure of system attributes.
+
+4. **Customizability**:
+   - Client instances can implement and share their custom workflows and handlers without interfering with root instance operations.
+
+---
+
+## Workflow Example
+1. **Root Instance Sharing**:
+   - A new action `ACTION_CUSTOM` is registered in `Root Instance A`.
+   - The action is shared with `Root Instance B`, expanding its capabilities.
+
+2. **Client Instance Sharing**:
+   - `Client Instance C` defines a custom handler `HANDLER_CLIENT`.
+   - The handler is shared with the root instance but is only accessible to users with appropriate RBAC permissions.
+
+3. **Conflict Resolution**:
+   - `Root Instance A` and `Root Instance B` both define `MSG_TRANSLATE`.
+   - If `Root Instance B` has a newer version, it is shared with `Root Instance A`.
+
+---
+
+## Error Handling
+1. **Conflicts**:
+   - Conflicts are logged and resolved dynamically by prioritizing missing or newer handlers.
+
+2. **RBAC Violations**:
+   - Unauthorized attempts to access client-provided attributes are blocked, and incidents are logged.
+
+3. **Connectivity Issues**:
+   - If a client instance fails to share attributes due to connectivity problems, the system retries or notifies the administrator.
+
+---
+
+## Testing
+- **Unit Tests**:
+  - Validate attribute table sharing between root instances.
+  - Test one-way sharing rules for client instances.
+- **Integration Tests**:
+  - Simulate various sharing scenarios and verify table synchronization.
+- **Conflict Resolution Tests**:
+  - Ensure proper handling of name conflicts and overrides.
+- **Security Tests**:
+  - Confirm RBAC rules prevent unauthorized access to shared attributes.
+
+---
+
+#End of File

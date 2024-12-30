@@ -1,64 +1,107 @@
 /*
  * =====================================================================
- * File:         Backend_Core_Quota_Manager.txt
+ * File:         Backend_Core_QuotaManager.txt
  * Folder:       Documentation/Backend/Core
- * Description:  Documentation on the Quota Manager system in Project Brain,
- *               detailing its role in managing token usage, enforcing limits,
- *               and supporting RBAC.
+ * Description:  Documentation for the Quota Manager component in Project Brain,
+ *               detailing its role in resource allocation, throttling, and usage
+ *               tracking across user tiers and workflows.
  * Author:       Michael G. Lustig
- * Created On:   2024-12-30 18:55:00 UTC
+ * Created On:   2024-12-30 21:15:00 UTC
  * Last Updated By: Michael G. Lustig
- * Last Updated: 2024-12-30 18:55:00 UTC
+ * Last Updated: 2024-12-30 21:15:00 UTC
  * Version:      1.0
  * Copyright:    (c) 2024 Editoza, LLC - All rights reserved.
  * =====================================================================
  */
 
-### **Quota Manager Overview**
+### **Overview**
+The Quota Manager in Project Brain ensures fair resource allocation and usage tracking across different user tiers (freemium, standard, enterprise). It implements RBAC-based throttling and quota enforcement to prevent resource overuse and ensure system stability.
 
-The Quota Manager in Project Brain ensures fair and efficient usage of system resources by tracking and enforcing token limits for actions, workflows, and messages. It integrates with the RBAC system for user-specific quotas and supports proactive throttling and resource allocation.
+### **Core Responsibilities**
+1. **Quota Enforcement**:
+   - Applies per-user or per-role usage limits on API calls, workflows, and actions.
+   - Supports dynamic scaling of quotas based on subscription tiers or system capacity.
 
----
+2. **RBAC Throttling**:
+   - Integrates with the RBAC system to define tier-specific usage rules.
+   - Implements time-based access limits for workflows and services.
 
-### **Core Features**
+3. **Usage Tracking**:
+   - Tracks usage metrics for users and workflows in real-time.
+   - Stores historical data for auditing and reporting.
 
-1. **Token Balances**:
-   - Tracks token balances for all users and services.
-   - Ensures transactions are within allowed quotas.
+4. **Dynamic Adjustment**:
+   - Adjusts quotas dynamically based on load, system capacity, or user upgrades.
+   - Collaborates with the Load Balancer and Monitor for adaptive scaling.
 
-2. **Quota Enforcement**:
-   - Supports tiered quotas for user types (e.g., free, standard, enterprise).
-   - Enforces soft limits (warnings) and hard limits (rejections).
+5. **Alerting and Notifications**:
+   - Notifies users or administrators when quotas are nearing limits.
+   - Sends alerts for violations or anomalous usage patterns.
 
-3. **RBAC Integration**:
-   - Dynamically applies quotas based on user roles and entitlements.
-   - Example: Free users = 100 tokens/day, Standard users = 500 tokens/day.
+### **Key Features**
+1. **Tier-Based Quotas**:
+   - Freemium: Low quota limits, access to basic features.
+   - Standard: Moderate quotas with premium feature access.
+   - Enterprise: High quotas, priority access, and advanced features.
 
-4. **Real-Time Monitoring**:
-   - Continuously monitors token usage and generates alerts for breaches or unusual activity.
+2. **Real-Time Throttling**:
+   - Enforces quotas dynamically during message processing.
+   - Prevents overuse by delaying or rejecting requests exceeding limits.
 
-5. **Flexible Quota Reset**:
-   - Resets quotas based on predefined schedules (daily, monthly) or custom rules.
+3. **Audit Trail**:
+   - Logs all usage data with GUIDs for traceability.
+   - Provides insights into user behavior and system usage trends.
 
-6. **Audit Trails**:
-   - Logs every transaction with GUIDs, token usage, and associated user/service details.
+4. **Customizable Limits**:
+   - Allows administrators to define custom quotas per user, role, or workflow.
+   - Supports time-bound rules (e.g., 100 API calls/hour).
 
----
+5. **Integration with Cost Tracking**:
+   - Maps token costs to usage for billing and audit purposes.
+   - Collaborates with the Cost Manager to ensure transparency.
 
-### **Implementation Details**
+### **Service Workflow**
+1. **Initialization**:
+   - Loads quota rules from encrypted configuration files.
+   - Registers with the Monitor for real-time updates on load and capacity.
 
-1. **Token Allocation**:
-   - Tokens are allocated during user registration or service initialization.
-   - Example: `quota_config.json`
-     ```json
-     {
-       "users": {
-         "free": { "daily_limit": 100 },
-         "standard": { "daily_limit": 500 },
-         "enterprise": { "daily_limit": "unlimited" }
-       }
-     }
-     ```
+2. **Request Validation**:
+   - Validates incoming requests against user quotas.
+   - Applies throttling or rejection if limits are exceeded.
+
+3. **Usage Updates**:
+   - Updates usage metrics in real-time for active sessions.
+   - Stores metrics in the database for historical analysis.
+
+4. **Alerts and Notifications**:
+   - Sends alerts for quota breaches or anomalies.
+   - Notifies users of impending quota limits and provides upgrade options.
+
+### **Example JSON Configuration**
+json
+{
+    "quota_manager": {
+        "tiers": {
+            "freemium": {
+                "api_calls_per_hour": 10,
+                "priority": "low"
+            },
+            "standard": {
+                "api_calls_per_hour": 100,
+                "priority": "medium"
+            },
+            "enterprise": {
+                "api_calls_per_hour": 500,
+                "priority": "high"
+            }
+        },
+        "alerts": {
+            "enabled": true,
+            "threshold_percentage": 90,
+            "channels": ["email", "dashboard"]
+        }
+    }
+}
 
 2. **Transaction Workflow**:
    - Before processing an action:

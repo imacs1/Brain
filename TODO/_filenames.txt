@@ -1,0 +1,60 @@
+Thank you for your patience. Based on the comprehensive folder structure, here is a summary of missing documents across all sections under Documentation:
+
+Backend/Core
+Missing documentation:
+
+Actions: No documents for actions under this folder.
+Auth: No documents for authentication-related functionality.
+Context: No documentation.
+LoadBalancer: No documentation.
+Messages: No documentation.
+Monitor: No documentation.
+Routing: No documentation.
+Templates: No documentation.
+Workflows: No documentation.
+Backend/Extensions
+Missing documentation for:
+
+CustomWorkflows: No documentation.
+Handlers: No documentation.
+Plugins: No documentation.
+Transformers: No documentation.
+Backend/Libraries
+Missing documentation:
+
+Crypto: No documentation.
+Storage: No documentation.
+Utils: No documentation.
+Backend/Services
+Missing documentation:
+
+ActionService: No documentation.
+MessageService: No documentation.
+WorkflowService: No documentation.
+Manager: No documentation.
+Config
+Missing documentation:
+
+Actions: No documentation.
+Auth: No documentation.
+Messages: No documentation.
+Workflows: No documentation.
+Frontend
+Missing documentation:
+
+ConsoleUI: No documentation.
+Shared: No documentation.
+WebUI: No documentation.
+Tools
+Missing documentation:
+
+Automation: No documentation.
+Deployment: No documentation.
+Diagnostics: No documentation.
+Tests
+Missing documentation:
+
+EndToEnd: No documentation.
+Functional: No documentation.
+Integration: No documentation.
+Unit: No documentation.

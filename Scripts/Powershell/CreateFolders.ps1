@@ -29,6 +29,7 @@ $backendFolders = @(
     "$baseFolder\Backend\Core\Templates",
     "$baseFolder\Backend\Services\ActionService",
     "$baseFolder\Backend\Services\MessageService",
+    "$baseFolder\Backend\Services\QuotaService",
     "$baseFolder\Backend\Services\WorkflowService",
     "$baseFolder\Backend\Services\Logger",
     "$baseFolder\Backend\Services\Manager",

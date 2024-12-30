@@ -1,0 +1,63 @@
+Root/
+├── ConsoleUI/
+│   ├── Program.cs
+│   ├── Menu/
+│   │   ├── ServiceManagement.cs
+│   │   ├── QueueManagement.cs
+│   │   ├── LogViewer.cs
+│   │   └── ConfigurationManagement.cs
+│   └── Utilities/
+│       └── ConsoleHelpers.cs
+├── Backend/
+│   ├── Core/
+│   │   ├── Services/
+│   │   │   ├── BaseService.cs
+│   │   │   ├── ServiceInstance.cs
+│   │   │   ├── ServiceConfig.cs
+│   │   │   ├── ServiceRegistry.cs
+│   │   │   └── Monitoring/
+│   │   │       ├── HeartbeatMonitor.cs
+│   │   │       └── MetricsCollector.cs
+│   │   ├── Routing/
+│   │   │   ├── RoutingTable.cs
+│   │   │   └── ReflectionLoader.cs
+│   │   ├── QuotaManager/
+│   │   │   ├── QuotaManager.cs
+│   │   ├── RBAC/
+│   │   │   ├── RBACPolicy.cs
+│   │   │   └── UserRoles.cs
+│   │   ├── Audit/
+│   │   │   └── AuditLogger.cs
+│   │   ├── Encryption/
+│   │   │   └── FileEncryption.cs
+│   │   └── Cost/
+│   │       └── CostTracker.cs
+│   ├── AI/
+│   │   ├── GRPC/
+│   │   │   ├── AIGrpcService.cs
+│   │   │   └── ProtoFiles/
+│   │   └── Context/
+│   │       ├── ContextManager.cs
+│   │       ├── Neo4jIntegration.cs
+│   │       └── TokenLimiter.cs
+│   ├── Messages/
+│   │   ├── MessageHandler.cs
+│   │   └── JSON/
+│   │       └── MSG_TRANSLATE.json
+│   ├── Actions/
+│   │   ├── ActionHandler.cs
+│   │   └── JSON/
+│   │       └── ACT_SUMMARIZE.json
+│   └── Workflows/
+│       ├── WorkflowHandler.cs
+│       └── JSON/
+│           └── WRK_SUMMARIZE_AND_TRANSLATE.json
+├── Documentation/
+│   ├── ConsoleUI/
+│   ├── Backend/
+│   └── Configuration/
+└── Config/
+    ├── appsettings.json
+    ├── services.json
+    ├── rbac.json
+    └── costs.json

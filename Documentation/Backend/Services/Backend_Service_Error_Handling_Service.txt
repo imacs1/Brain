@@ -1,6 +1,6 @@
 /*
  * =====================================================================
- * File:         Error_Handling_Service.txt
+ * File:         Backend_Service_Error_Handling_Service.txt
  * Folder:       Documentation/Backend/Services
  * Description:  Explains the Error Handling Service, its integration
  *               with the Logger and ErrorRegistry, and its role in Project Brain.

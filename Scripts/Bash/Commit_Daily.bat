@@ -1,3 +1,4 @@
+cd ../..
 git status
 pause
 git add .

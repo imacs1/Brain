@@ -1,0 +1,113 @@
+/*
+ * =====================================================================
+ * File:         Docs_Config_Auth.txt
+ * Folder:       C:\AI\Brain\Documentation\Config\Auth
+ * Description:  Documentation for Auth configuration, detailing user 
+ *               authentication and role-based access control (RBAC).
+ * Author:       Michael G. Lustig
+ * Created On:   2024-12-30 16:30:00 UTC
+ * Version:      1.0
+ * Copyright:    (c) 2024 Editoza, LLC - All rights reserved.
+ * =====================================================================
+ */
+
+# Config: Auth
+
+## Overview
+The Auth configuration defines the structure and behavior for user authentication, authorization, and RBAC enforcement across the Brain system. This ensures secure access to resources and functionality based on user roles, entitlements, and permissions.
+
+---
+
+## Configuration Structure
+Each Auth configuration is stored in JSON format and dynamically registered during runtime.
+
+```json
+{
+  "role": "Administrator",
+  "permissions": {
+    "actions": ["CREATE", "DELETE", "MODIFY"],
+    "resources": ["WorkflowManager", "UserManager", "SystemSettings"]
+  },
+  "entitlements": {
+    "level": "Enterprise",
+    "quota": "Unlimited"
+  },
+  "timeBasedAccess": {
+    "start": "09:00",
+    "end": "18:00",
+    "timezone": "UTC"
+  },
+  "displayLevel": "Critical"
+}
+Fields:
+- **role**:  
+  Specifies the user role (e.g., Administrator, Editor, Viewer).  
+- **permissions**:  
+  Defines allowed actions and accessible resources for the role.  
+- **entitlements**:  
+  Details user entitlements, such as subscription level and resource quotas.  
+- **timeBasedAccess**:  
+  Restricts access to specific time windows, enforcing security policies.  
+- **displayLevel**:  
+  Sets the DisplayLevel for logging and UI representation of Auth events.  
+
+Integration:  
+Auth configurations are dynamically registered and enforce access control throughout the system.  
+
+- **Authentication**:  
+  Users authenticate via OAuth, token-based mechanisms, or username-password combinations.  
+
+- **Authorization**:  
+  RBAC checks are performed during each request to ensure compliance with defined roles and permissions.  
+
+- **Entitlement Enforcement**:  
+  Entitlements such as quotas or subscription levels are validated before executing user actions.  
+
+- **Time-Based Access**:  
+  Time-based policies restrict resource access outside the allowed time windows.  
+
+Example Use Cases:  
+- **Administrator Role**:  
+  Grants full control over workflows, user management, and system settings.  
+
+- **Editor Role**:  
+  Allows creating and modifying workflows but restricts access to system-level settings.  
+
+- **Viewer Role**:  
+  Provides read-only access to resources, ensuring no modifications can be made.  
+
+Error Handling:  
+- **Invalid Configuration**:  
+  Improperly defined roles or permissions are logged as `Critical` during startup.  
+
+- **Access Denied**:  
+  Unauthorized access attempts are logged with details of the violation.  
+
+Testing:  
+- **Unit Tests**:  
+  Validate individual Auth configurations for accuracy and completeness.  
+
+- **Integration Tests**:  
+  Ensure RBAC enforcement functions correctly across workflows and services.  
+
+- **Security Tests**:  
+  Simulate unauthorized access attempts to validate system robustness.  
+
+Security:  
+- **Encryption**:  
+  All Auth configurations are encrypted in storage and decrypted only during runtime.  
+
+- **Audit Logs**:  
+  Detailed logs track authentication and authorization events for auditing purposes.  
+
+Future Enhancements:  
+- **Dynamic Role Management**:  
+  Enable administrators to create and modify roles dynamically via the WebUI.  
+
+- **Custom Permissions**:  
+  Allow users to define granular permissions for specific resources.  
+
+- **Real-Time Monitoring**:  
+  Provide live dashboards showing authentication and authorization activity.  
+
+#End of File

@@ -1,0 +1,77 @@
+/*
+ * =====================================================================
+ * File:         Queue_Management.txt
+ * Folder:       Documentation/Backend/Core
+ * Description:  Documentation on the priority-based queuing mechanism
+ *               in Project Brain, including dynamic prioritization
+ *               and processing strategies.
+ * Author:       Michael G. Lustig
+ * Created On:   2024-12-29 23:10:00 UTC
+ * Last Updated By: Michael G. Lustig
+ * Last Updated: 2024-12-29 23:10:00 UTC
+ * Version:      1.0
+ * Copyright:    (c) 2024 Editoza, LLC - All rights reserved.
+ * =====================================================================
+ */
+
+# Queue Management
+
+## Overview
+The queue management system in Project Brain ensures fair and efficient processing of messages based on dynamic priority rules.
+
+## Core Features
+
+1. **Priority-Based Queuing**
+   - Messages are classified into four priority levels:
+     - **Override**: 100% processing priority until the queue is cleared.
+     - **High**: 60% of remaining messages processed.
+     - **Medium**: 30% of remaining messages processed.
+     - **Low**: 10% of remaining messages processed.
+   - A weighted queue processing algorithm ensures consistent throughput for all priorities.
+
+2. **Dynamic Rebalancing**
+   - Queues dynamically adjust to accommodate real-time changes in message priorities or system load.
+
+3. **Fault Tolerance**
+   - Failed messages are retried or moved to a dead-letter queue for manual intervention.
+
+4. **Integration with Load Balancer**
+   - High-priority messages are routed to the fastest available servers for quicker processing.
+
+## Workflow Example
+
+1. Messages are added to priority-based queues.
+2. The `QueueManager` service processes override messages first.
+3. Remaining messages are processed based on the 6:3:1 ratio for high, medium, and low priorities.
+4. Processed messages are removed from the queue, and any errors are logged.
+
+## Configuration Example
+
+- Priority definitions and processing rules are stored in `queue_config.json`.
+- Example:
+  ```json
+  {
+    "priorities": {
+      "override": { "weight": 100 },
+      "high": { "weight": 60 },
+      "medium": { "weight": 30 },
+      "low": { "weight": 10 }
+    },
+    "retry_policy": {
+      "max_retries": 3,
+      "retry_interval": 1000
+    }
+  }
+### Fault Handling
+  1. Retries:
+    a) Failed messages are retried up to the maximum retry count.
+    b) Retry intervals are defined in the configuration.
+
+  2. Dead-Letter Queue:
+    a) Messages that consistently fail are moved to a dead-letter queue for manual intervention.
+
+### Future Enhancements
+  a) Predictive queue balancing using AI to optimize message processing.
+  b) Real-time visualization of queue status and metrics.
+  c) Advanced error recovery mechanisms for complex workflows.
+#End of file

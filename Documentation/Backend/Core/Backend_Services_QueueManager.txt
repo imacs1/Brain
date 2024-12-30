@@ -1,0 +1,109 @@
+/*
+ * =====================================================================
+ * File:         Backend_Services_QueueManager.txt
+ * Folder:       Documentation/Backend/Services
+ * Description:  Documentation of the Queue Manager service in Project Brain,
+ *               responsible for managing queues, processing priorities, and
+ *               integrating with the load balancer and monitoring systems.
+ * Author:       Michael G. Lustig
+ * Created On:   2024-12-30 20:50:00 UTC
+ * Last Updated By: Michael G. Lustig
+ * Last Updated: 2024-12-30 20:50:00 UTC
+ * Version:      1.0
+ * Copyright:    (c) 2024 Editoza, LLC - All rights reserved.
+ * =====================================================================
+ */
+
+### **Overview**
+The Queue Manager service orchestrates the queuing system in Project Brain. It manages priority-based message processing, dead-letter handling, and dynamic resource allocation to ensure seamless and efficient operations.
+
+### **Core Responsibilities**
+1. **Priority Management**:
+   - Organizes messages into separate priority-based queues (Override, High, Medium, Low).
+   - Implements 6:3:1 processing ratios for High, Medium, and Low priorities, ensuring fair allocation.
+
+2. **Dead-Letter Handling**:
+   - Captures unprocessable messages in a dedicated dead-letter queue.
+   - Supports inspection and manual retry mechanisms.
+
+3. **Dynamic Integration**:
+   - Works with the Load Balancer to assign messages to the fastest service instances.
+   - Monitors queue lengths and dynamically scales resources.
+
+4. **RBAC and Quota Management**:
+   - Enforces RBAC policies for queue access and message processing limits.
+   - Integrates with the Quota Manager for throttling based on user entitlements.
+
+5. **Monitoring and Analytics**:
+   - Tracks metrics such as queue lengths, processing times, and error rates.
+   - Provides data for real-time dashboards and alerts.
+
+### **Key Features**
+1. **Real-Time Prioritization**:
+   - Processes Override messages immediately, followed by High, Medium, and Low priorities.
+   - Ensures critical tasks are addressed with minimal latency.
+
+2. **Scalable Processing**:
+   - Automatically adjusts processing capacity during high loads.
+   - Supports both vertical and horizontal scaling.
+
+3. **Integration with Workflow Engine**:
+   - Receives and routes messages originating from workflows.
+   - Updates message statuses and logs results for transparency.
+
+4. **Error Recovery**:
+   - Automatically retries failed messages based on predefined policies.
+   - Logs errors and escalates unresolved issues to administrators.
+
+### **Service Workflow**
+1. **Message Ingestion**:
+   - Accepts messages from various sources (e.g., workflows, APIs).
+   - Assigns priorities and adds metadata such as GUIDs and timestamps.
+
+2. **Queue Allocation**:
+   - Places messages into appropriate priority-based queues.
+   - Updates the Load Balancer with real-time queue information.
+
+3. **Message Processing**:
+   - Retrieves messages from queues based on priority ratios.
+   - Assigns tasks to service instances via Load Balancer integration.
+
+4. **Dead-Letter Handling**:
+   - Moves unprocessable messages to the dead-letter queue.
+   - Provides tools for inspection, retry, or deletion.
+
+### **Design Principles**
+1. **Modularity**:
+   - Decouples queuing logic from processing services for scalability and maintainability.
+
+2. **Resilience**:
+   - Ensures continuous operation with fault-tolerant mechanisms.
+
+3. **Transparency**:
+   - Logs all queue operations for auditability and debugging.
+
+### **Example JSON Configuration**
+```json
+{
+    "queue_manager": {
+        "priority_ratios": {
+            "high": 6,
+            "medium": 3,
+            "low": 1
+        },
+        "retry_policy": {
+            "max_retries": 5,
+            "retry_interval_ms": 1000
+        },
+        "dead_letter_queue": {
+            "enabled": true,
+            "retention_period_days": 7
+        }
+    }
+}
+### **Future Enhancements**
+  - Predictive analytics for queue load balancing.
+  - Advanced error classification and automated resolution for dead-letter messages.
+  - Integration with external queuing systems like RabbitMQ or Kafka.
+
+#End of file

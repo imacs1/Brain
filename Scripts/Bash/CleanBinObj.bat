@@ -1,6 +1,6 @@
 @echo off
 :: Save this as CleanBinObj.bat and run it in your solution folder
-
+cd ..\..
 echo Cleaning all bin and obj folders...
 
 :: Recursively find and delete all bin folders
