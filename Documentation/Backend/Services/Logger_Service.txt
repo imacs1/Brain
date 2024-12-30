@@ -1,0 +1,68 @@
+/*
+ * =====================================================================
+ * File:         Logger_Service.txt
+ * Folder:       Documentation/Backend/Services
+ * Description:  Details the architecture, functionality, and integration
+ *               points of the Logger Service within Project Brain.
+ * Author:       Michael G. Lustig
+ * Created On:   2024-12-29 22:30:00 UTC
+ * Last Updated By: Michael G. Lustig
+ * Last Updated: 2024-12-29 22:30:00 UTC
+ * Version:      2.0
+ * Copyright:    (c) 2024 Editoza, LLC - All rights reserved.
+ * =====================================================================
+ */
+
+# Logger Service Documentation
+
+## Overview
+
+The Logger Service records system events, status updates, and errors across all services in Project Brain. It operates as a centralized service to ensure consistency and extensibility in logging.
+
+## Key Features
+
+1. **Centralized Logging**:
+   - Records all logs in a structured format (e.g., JSON).
+   - Supports multiple destinations (e.g., files, databases, and real-time monitoring tools).
+
+2. **Levels of Logging**:
+   - **Info**: General system activity.
+   - **Debug**: Detailed information for debugging.
+   - **Warning**: Non-critical issues.
+   - **Error**: Critical errors needing immediate attention.
+
+3. **Integration with Error Handling**:
+   - Logs errors reported by the **ErrorRegistry**.
+   - Triggers error analysis pipelines for critical logs.
+
+4. **Alerting Mechanism**:
+   - Sends notifications for critical events (e.g., email, Slack).
+   - Configurable thresholds for alerts.
+
+## Configuration
+
+### Configuration File Example:
+```json
+{
+  "Logger": {
+    "LogLevel": "Debug",
+    "EnableConsoleLogging": true,
+    "EnableFileLogging": true,
+    "EnableDatabaseLogging": false,
+    "FilePath": "/logs/system.log",
+    "LogFormat": "JSON",
+    "MaxRetentionDays": 30
+  }
+}
+Integration Points
+ErrorRegistry:
+
+Critical errors logged are forwarded to the ErrorRegistry for analysis and resolution.
+Monitoring Services:
+
+Provides real-time logs to the monitoring dashboard.
+Future Enhancements
+Structured logs for deeper analysis.
+Alert customization for thresholds and channels.
+Real-time dashboards for viewing logs.
+#End of file

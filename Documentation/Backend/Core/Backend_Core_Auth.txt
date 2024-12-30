@@ -1,0 +1,132 @@
+/*
+ * =====================================================================
+ * File:         Backend_Core_Auth.txt
+ * Folder:       Documentation/Backend/Core
+ * Description:  Documentation for the Authentication and Authorization
+ *               (Auth) module in Project Brain, focusing on RBAC, time-based
+ *               access rules, and OAuth integration.
+ * Author:       Michael G. Lustig
+ * Created On:   2024-12-30 21:45:00 UTC
+ * Last Updated By: Michael G. Lustig
+ * Last Updated: 2024-12-30 21:45:00 UTC
+ * Version:      1.0
+ * Copyright:    (c) 2024 Editoza, LLC - All rights reserved.
+ * =====================================================================
+ */
+
+### **Overview**
+The Authentication and Authorization (Auth) module enforces security policies for accessing workflows, actions, and messages. By leveraging RBAC and dynamic rules, it ensures fine-grained control over user and service permissions.
+
+### **Core Features**
+1. **Role-Based Access Control (RBAC):**
+   - Supports hierarchical roles (e.g., Admin, Editor, Viewer).
+   - Permissions defined for actions, workflows, and messages.
+
+2. **Time-Based Access Rules:**
+   - Enforces access restrictions based on time windows.
+   - Example: "User X can access Workflow Y only during business hours."
+
+3. **OAuth Integration:**
+   - Supports OAuth 2.0 for secure token-based authentication.
+   - Configurable scopes and token expiration policies.
+
+4. **Audit Trails:**
+   - Tracks all authentication and authorization events.
+   - Logs include GUIDs for auditability.
+
+### **Key Components**
+1. **AuthManager:**
+   - Centralized API for authentication and authorization.
+   - Validates tokens, checks RBAC rules, and enforces time-based policies.
+
+2. **RBAC Configurations:**
+   - JSON-based configuration files for defining roles and permissions.
+   - Example:
+     ```json
+     {
+       "roles": {
+         "Admin": {
+           "permissions": ["ALL"]
+         },
+         "Editor": {
+           "permissions": ["CREATE", "EDIT", "VIEW"]
+         },
+         "Viewer": {
+           "permissions": ["VIEW"]
+         }
+       }
+     }
+     ```
+
+3. **OAuthHandler:**
+   - Manages OAuth flows, including token issuance and validation.
+   - Configures client credentials and scope-based access.
+
+4. **AuditLogger:**
+   - Records authentication and authorization events.
+   - Logs include user IDs, actions, timestamps, and outcomes.
+
+### **Workflow Example**
+#### User Authentication:
+1. **Token Issuance:**
+   - User requests a token via OAuth.
+   - Example:
+     ```http
+     POST /auth/token
+     Content-Type: application/json
+     {
+       "username": "user@example.com",
+       "password": "securepassword"
+     }
+     ```
+
+2. **Token Validation:**
+   - AuthManager validates the token during each request.
+   - Example:
+     ```csharp
+     bool isValid = AuthManager.ValidateToken("access_token");
+     ```
+
+#### Authorization Check:
+1. **RBAC Enforcement:**
+   - AuthManager checks user role and permissions.
+   - Example:
+     ```csharp
+     bool hasAccess = AuthManager.CheckPermission(user, "EDIT_WORKFLOW");
+     ```
+
+2. **Time-Based Rules:**
+   - Checks if the current time falls within allowed access windows.
+   - Example:
+     ```csharp
+     bool isAllowed = AuthManager.IsAccessAllowed(user, workflow, DateTime.UtcNow);
+     ```
+
+### **Integration with Other Modules**
+1. **Action and Workflow Modules:**
+   - AuthManager enforces RBAC for each action and workflow step.
+2. **Message Handling:**
+   - Messages include metadata for RBAC validation before processing.
+3. **Monitoring and Logging:**
+   - AuditLogger integrates with the logging service for centralized tracking.
+
+### **Best Practices**
+1. **Token Rotation:**
+   - Use short-lived tokens with refresh mechanisms to minimize risk.
+2. **RBAC Optimization:**
+   - Assign roles at the lowest necessary level to reduce over-privilege.
+3. **Audit Log Analysis:**
+   - Regularly review logs for unauthorized access attempts.
+
+### **Future Enhancements**
+1. **Adaptive Access Control:**
+   - Dynamically adjust permissions based on user behavior or risk analysis.
+2. **Multi-Factor Authentication (MFA):**
+   - Add MFA support for enhanced security.
+3. **RBAC Visualization:**
+   - Provide a graphical tool for managing roles and permissions.
+
+### **Conclusion**
+The Auth module provides robust security for Project Brain, ensuring controlled and traceable access to system components. Its integration with RBAC, OAuth, and time-based rules offers a comprehensive solution for modern access management.
+
+#End of file

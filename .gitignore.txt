@@ -1,0 +1,14 @@
+# Logs
+*.log
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Build files
+bin/
+obj/
+
+# Configurations
+*.config
+*.json.enc

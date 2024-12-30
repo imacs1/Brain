@@ -1,0 +1,82 @@
+/*
+ * =====================================================================
+ * File:         Namespace_Conventions.txt
+ * Folder:       Documentation/Overview
+ * Description:  Guidelines for naming and structuring namespaces in the
+ *               Project Brain system to ensure clarity and consistency.
+ * Author:       Michael G. Lustig
+ * Created On:   2024-12-29 12:01:00 UTC
+ * Last Updated By: Michael G. Lustig
+ * Last Updated: 2024-12-30 00:20:00 UTC
+ * Version:      1.1
+ * Copyright:    (c) 2024 Editoza, LLC - All rights reserved.
+ * =====================================================================
+ */
+
+# Namespace Conventions
+
+## Purpose
+Namespaces in the Project Brain system are designed to organize code logically, ensure clarity, and avoid naming collisions. These conventions are crucial for maintaining a clean and scalable codebase.
+
+---
+
+## General Structure
+The namespace structure follows the folder hierarchy:
+
+```
+ProjectBrain.[Component].[SubComponent]
+```
+
+### Example
+For the `ActionService` in the `Backend`:
+```csharp
+namespace ProjectBrain.Backend.Services.ActionService
+{
+    // Code here
+}
+```
+
+---
+
+## Specific Guidelines
+
+1. **Top-Level Components**
+   - Use `Backend`, `Frontend`, `Config`, `Docs`, `Tools`, `Scripts`, or `Tests` as the first namespace segment to represent the primary area of the project.
+
+2. **SubComponents**
+   - Reflect folder structure under the top-level components.
+   - Example: `Backend.Core.Actions` for the `Actions` subcomponent in the core backend.
+
+3. **Service Namespaces**
+   - Each service has its own namespace.
+   - Example: `Backend.Services.ActionService`.
+
+4. **Extensions and Libraries**
+   - Use `Extensions` for plugins, workflows, and handlers.
+   - Example: `Backend.Extensions.Handlers`.
+   - Use `Libraries` for utility functions, storage, or encryption.
+   - Example: `Backend.Libraries.Crypto`.
+
+5. **Frontend Specific**
+   - Use `Frontend.ConsoleUI` or `Frontend.WebUI` based on the type of UI.
+   - Example: `Frontend.ConsoleUI.Views`.
+
+6. **Tests**
+   - Organized by type: `Functional`, `Integration`, `Unit`, and `EndToEnd`.
+   - Example: `Tests.Functional.ActionServiceTests`.
+
+---
+
+## Short but Descriptive Names
+1. Avoid overly long or ambiguous names.
+2. Use PascalCase for namespaces.
+3. Abbreviate only when commonly understood (e.g., `UI` for User Interface).
+
+---
+
+## Benefits of Adhering to Conventions
+1. **Readability**: Developers can immediately locate components based on their namespace.
+2. **Scalability**: Clear structure supports the addition of new components without confusion.
+3. **Tooling Support**: IDE features like autocomplete and refactoring work seamlessly with consistent namespaces.
+
+#End of file

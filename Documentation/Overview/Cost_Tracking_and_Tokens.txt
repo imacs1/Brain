@@ -1,0 +1,102 @@
+/*
+ * =====================================================================
+ * File:         Cost_Tracking_and_Tokens.txt
+ * Folder:       Documentation/Overview
+ * Description:  Details the cost tracking mechanism in Project Brain,
+ *               utilizing tokens to enable flexible pricing.
+ * Author:       Michael G. Lustig
+ * Created On:   2024-12-30 18:45:00 UTC
+ * Last Updated By: Michael G. Lustig
+ * Last Updated: 2024-12-30 18:45:00 UTC
+ * Version:      1.0
+ * Copyright:    (c) 2024 Editoza, LLC - All rights reserved.
+ * =====================================================================
+ */
+
+### **Cost Tracking and Token System**
+
+Cost tracking in Project Brain is token-based, ensuring a flexible and scalable approach to pricing. Tokens abstract direct monetary costs, enabling dynamic adjustments based on demand, system changes, or feature upgrades.
+
+---
+
+### **Core Features**
+
+1. **Token-Based Costs**:
+   - Actions, messages, and workflows are associated with token costs.
+   - Example: Translation = 5 tokens/1000 words, Summarization = 2 tokens/1000 words.
+
+2. **Dynamic Token Valuation**:
+   - Token values are decoupled from USD or other currencies.
+   - Allows adjustments to token pricing without system-wide modifications.
+
+3. **Per-Action and Workflow Costs**:
+   - Each action or workflow step has a defined token cost, considering resource usage, processing time, and API calls.
+
+4. **Quota Management**:
+   - Integrated with RBAC and throttling mechanisms to manage token usage limits by user type (e.g., free, standard, enterprise).
+   - Example: Free users = 100 tokens/day, Enterprise users = unlimited tokens.
+
+5. **Audit Trails**:
+   - Every transaction records a GUID, tokens used, and the associated user or service.
+   - Supports transparent reporting and accountability.
+
+---
+
+### **Implementation Details**
+
+1. **Cost Definition**:
+   - Costs are defined in JSON configuration files for ease of updates and centralization.
+   - Example structure:
+     ```json
+     {
+       "actions": {
+         "translate": { "cost_per_unit": 5, "unit": "1000 words" },
+         "summarize": { "cost_per_unit": 2, "unit": "1000 words" }
+       },
+       "workflows": {
+         "summarize_and_translate": { "cost_per_step": 7 }
+       }
+     }
+     ```
+
+2. **Integration with Quota Manager**:
+   - Users and services have token balances, tracked by the Quota Manager.
+   - Requests exceeding quotas are rejected with appropriate messages.
+
+3. **Real-Time Cost Evaluation**:
+   - Before executing an action or workflow, the system checks token availability.
+   - If insufficient, requests are queued or rejected.
+
+4. **Token Replenishment**:
+   - Tokens are replenished based on subscription plans or manual purchases.
+   - Example: Free users get a daily reset, paid users replenish via API.
+
+---
+
+### **Key Benefits**
+
+- **Flexibility**:
+  - Adaptable pricing across regions, user tiers, or system updates.
+  
+- **Transparency**:
+  - Clear token usage and audit trails enhance trust and accountability.
+
+- **Scalability**:
+  - Simplifies cost scaling for new features or services without extensive reconfiguration.
+
+---
+
+### **Future Enhancements**
+
+1. **Token Market**:
+   - Dynamic pricing based on supply-demand or feature popularity.
+
+2. **Advanced Quota Controls**:
+   - Tiered token pricing for higher usage.
+
+3. **Third-Party Integration**:
+   - Token systems compatible with external platforms or services.
+
+---
+
+#End of file

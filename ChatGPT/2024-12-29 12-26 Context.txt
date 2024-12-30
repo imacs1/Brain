@@ -1,0 +1,32 @@
+Here is the summarized memory context:
+
+System Overview
+Data-Driven Design: Dynamic routing for actions, workflows, and messages using reflection and JSON configuration files.
+Dynamic Routing Tables: Created at startup; updated when services change or periodically.
+Dependency Order: Actions load first, followed by messages, and then workflows to resolve dependencies.
+Core Architecture
+Base Service: Manages lifecycle, RBAC, cost tracking, monitoring, and logging.
+Service Config and Instance: Encapsulates runtime service details, supporting dynamic scaling and monitoring.
+Routing and Load Balancing: Determines the best service instance for handling messages based on priority, entitlements, and availability.
+Monitoring and Fault Tolerance
+Heartbeat Monitoring: Ensures service health.
+Proactive Fault Handling: Identifies bottlenecks and enables scaling or mitigation.
+Self-Diagnostics: Integrated testing and fault detection from the start.
+Security and Compliance
+Data Encryption: All configuration and data files are encrypted using LibSodium.
+Audit Trails: GUIDs used for tracking all transactions and configurations.
+Backend Components
+Core modules: Actions, Messages, Workflows, Context, etc.
+Services: ActionService, MessageService, WorkflowService, Logger, etc.
+Storage: PostgreSQL and Neo4j for relational and graph-based requirements.
+Frontend Design
+Console UI: Menu-driven, extending later into a web-based or graphical interface.
+Development and Maintenance
+Documentation: Comprehensive, folder-aligned, with detailed headers and summaries.
+Tools: Scripts for automation, diagnostics, and deployment.
+Testing Framework: Supports unit, integration, functional, and end-to-end tests.
+Guiding Principles
+Dynamic and Modular: Avoid hardcoding, with flexible, replaceable components.
+Cross-Platform Compatibility: Ensures seamless operation across OS environments.
+Future-Ready: Designed to support advanced monitoring, speculative workflows, and distributed systems.
+This reflects the current refined design, priorities, and implementation goals.

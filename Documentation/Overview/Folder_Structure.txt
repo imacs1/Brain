@@ -1,0 +1,100 @@
+
+/*
+ * =====================================================================
+ * File:         Project_Brain_Folder_Structure.txt
+ * Folder:       Documentation/Overview
+ * Description:  Tree structure for Project Brain, aligning with the
+ *               updated data-driven architecture and modular design.
+ * Author:       Michael G. Lustig
+ * Created On:   2024-12-29 21:30:00 UTC
+ * Last Updated By: Michael G. Lustig
+ * Last Updated: 2024-12-29 21:30:00 UTC
+ * Version:      1.1
+ * Copyright:    (c) 2024 Editoza, LLC - All rights reserved.
+ * =====================================================================
+ */
+
+Brain
+├── Backend
+│   ├── Core
+│   │   ├── Actions
+│   │   ├── Messages
+│   │   ├── Workflows
+│   │   ├── Context
+│   │   ├── Auth
+│   │   ├── Routing
+│   │   ├── LoadBalancer
+│   │   ├── Monitor
+│   │   └── Templates
+│   ├── Services
+│   │   ├── ActionService
+│   │   ├── MessageService
+│   │   ├── WorkflowService
+│   │   ├── Logger
+│   │   ├── Manager
+│   │   ├── TestService
+│   │   └── Simulator
+│   ├── Extensions
+│   │   ├── Plugins
+│   │   ├── CustomWorkflows
+│   │   ├── Handlers
+│   │   └── Transformers
+│   └── Libraries
+│       ├── Crypto
+│       ├── Utils
+│       └── Storage
+├── Frontend
+│   ├── ConsoleUI
+│   │   ├── Views
+│   │   ├── Config
+│   │   └── Logs
+│   ├── WebUI
+│   │   ├── Components
+│   │   ├── Pages
+│   │   ├── Services
+│   │   └── Tests
+│   └── Shared
+│       ├── Components
+│       └── Assets
+├── Config
+│   ├── Global
+│   ├── Services
+│   ├── Actions
+│   ├── Messages
+│   ├── Workflows
+│   └── Auth
+├── Docs
+│   ├── Overview
+│   ├── Backend
+│   │   ├── Core
+│   │   ├── Services
+│   │   ├── Extensions
+│   │   └── Libraries
+│   ├── Frontend
+│   │   ├── ConsoleUI
+│   │   ├── WebUI
+│   │   └── Shared
+│   ├── Config
+│   │   ├── Actions
+│   │   ├── Messages
+│   │   ├── Workflows
+│   │   └── Auth
+│   └── Tools
+│       ├── Deployment
+│       ├── Automation
+│       └── Testing
+├── Tools
+│   ├── Deployment
+│   ├── Automation
+│   └── Diagnostics
+├── Scripts
+│   ├── Powershell
+│   ├── Bash
+│   └── Python
+└── Tests
+    ├── Functional
+    ├── Integration
+    ├── Unit
+    └── EndToEnd
+
+#End of file

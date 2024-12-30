@@ -1,0 +1,84 @@
+/*
+ * =====================================================================
+ * File:         Config_Overview.txt
+ * Folder:       Documentation/Config
+ * Description:  Overview of the configuration system used in Project Brain,
+ *               including its structure, components, and dynamic capabilities.
+ * Author:       Michael G. Lustig
+ * Created On:   2024-12-29 12:16:00 UTC
+ * Last Updated By: Michael G. Lustig
+ * Last Updated: 2024-12-30 14:10:00 UTC
+ * Version:      1.1
+ * Copyright:    (c) 2024 Editoza, LLC - All rights reserved.
+ * =====================================================================
+ */
+
+# Configuration Overview
+
+## Purpose
+The configuration system defines the operational parameters for the Project Brain ecosystem, providing centralized and distributed configurations for services, workflows, and components.
+
+## Structure
+Configurations are stored in encrypted JSON files and include:
+1. **Global Configuration**:
+   - System-wide settings, including logging levels, security policies, and RBAC rules.
+2. **Service-Specific Configuration**:
+   - Individual settings for services such as MessageService, WorkflowService, and others.
+3. **Context Configuration**:
+   - Definitions for dynamic context management using Neo4j.
+4. **Action and Workflow Configurations**:
+   - Templates and steps for actions and workflows.
+
+## Key Features
+1. **Encrypted Storage**:
+   - Configurations are encrypted using LibSodium for security.
+   - Decrypted on-demand during service initialization.
+
+2. **Dynamic Reloading**:
+   - Changes to configuration files are detected automatically.
+   - Updates trigger reloading of routing tables, RBAC policies, and workflow definitions.
+
+3. **RBAC Integration**:
+   - Configurations specify roles, permissions, and time-based access rules for services, workflows, and actions.
+
+4. **Speculative Workflow Support**:
+   - Includes speculative contexts and versioning to facilitate "what-if" scenarios.
+
+5. **Integration with Context Management**:
+   - Configuration includes details for connecting workflows and services with Neo4j.
+
+6. **Prioritization Rules**:
+   - Real-time prioritization parameters for messages, ensuring optimal processing order.
+
+## Dependencies
+- **Crypto Library**:
+   - LibSodium for encryption and decryption of configuration files.
+- **Storage**:
+   - PostgreSQL for relational configuration management.
+   - Neo4j for context-aware configurations.
+
+## Example Configuration File: Service Config
+```json
+{
+  "ServiceName": "MessageService",
+  "Logging": {
+    "LogLevel": "Debug",
+    "EnableTextLogging": true
+  },
+  "QueueConfig": {
+    "QueueName": "PriorityQueue",
+    "MaxRetries": 5,
+    "RetryIntervalMs": 2000
+  }
+}
+Future Enhancements
+Graph-Based Dependency Visualization:
+Use Neo4j to map dependencies between services, workflows, and actions.
+Dynamic Templates:
+Allow creation and modification of workflow templates at runtime.
+API Access:
+Enable programmatic interaction with configuration files through a dedicated API.
+Related Documentation
+Backend Core Overview: Details on services using configurations.
+Dynamic Context Management: Integration with Neo4j-based context handling.
+#End of file

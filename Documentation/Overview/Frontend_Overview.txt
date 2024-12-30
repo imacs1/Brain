@@ -1,0 +1,85 @@
+/*
+ * =====================================================================
+ * File:         Frontend_Overview.txt
+ * Folder:       Documentation/Overview
+ * Description:  Overview of the frontend components for the Brain system,
+ *               including Console UI, Web UI, and shared components.
+ * Author:       Michael G. Lustig
+ * Created On:   2024-12-29 12:16:00 UTC
+ * Last Updated By: Michael G. Lustig
+ * Last Updated: 2024-12-29 23:50:00 UTC
+ * Version:      1.2
+ * Copyright:    (c) 2024 Editoza, LLC - All rights reserved.
+ * =====================================================================
+ */
+
+# Frontend Overview
+
+## Introduction
+The frontend of the Brain system provides the user interface for managing services, workflows, and configurations. It is designed to be lightweight, intuitive, and extensible, ensuring seamless interaction with the backend services.
+
+## Key Components
+1. **Console UI**:
+   - A command-line interface for managing the system.
+   - Provides menu-driven navigation for managing services, queues, and logs.
+   - Ideal for developers and administrators who prefer lightweight tools.
+
+2. **Web UI**:
+   - A web-based interface for advanced management.
+   - Supports graphical visualization of workflows and configurations.
+   - Offers enhanced features such as dashboards and real-time monitoring.
+
+3. **Shared Components**:
+   - Common modules and assets used across both Console and Web UIs.
+   - Includes utility libraries, shared styles, and reusable components.
+
+## Design Principles
+1. **Separation of Concerns**:
+   - Console and Web UIs operate independently, ensuring modularity.
+   - Shared components are abstracted for reusability.
+
+2. **Data-Driven Behavior**:
+   - Frontend dynamically adapts to configurations loaded from the backend.
+   - Supports real-time updates for workflows and services.
+
+3. **Cross-Platform Compatibility**:
+   - Ensures compatibility with major operating systems and browsers.
+   - Uses standard libraries and frameworks for frontend development.
+
+4. **Extensibility**:
+   - Designed to accommodate future enhancements like mobile apps or third-party integrations.
+
+## Features
+1. **Console UI**:
+   - Simple navigation menu for core functionalities:
+     1. Manage Services
+     2. Manage Queues
+     3. View Logs
+     4. Update Configurations
+   - Logs and error handling are displayed in real-time.
+
+2. **Web UI**:
+   - Modern, responsive design with interactive dashboards.
+   - Visual representation of workflows and service relationships.
+   - Integration with Neo4j for graph-based visualization.
+   - Provides a rich set of controls for managing configurations and workflows.
+
+3. **Shared Components**:
+   - Unified styles for consistent user experience.
+   - Shared utilities for logging, configuration, and state management.
+
+## Integration with Backend
+- **gRPC Communication**:
+  - Both Console and Web UIs use gRPC for secure and efficient interaction with backend services.
+- **Dynamic Updates**:
+  - UIs are updated in real-time based on changes in configurations and workflows.
+- **Error Handling**:
+  - Errors are logged and displayed for user awareness.
+  - Advanced RBAC ensures secure access to sensitive operations.
+
+## Development Focus
+1. Implement a robust and intuitive Console UI as a foundation.
+2. Gradually expand to a Web UI with advanced visualization capabilities.
+3. Ensure seamless integration with backend services through gRPC.
+
+#End of file

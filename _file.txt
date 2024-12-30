@@ -1,0 +1,620 @@
+ Volume in drive C is EDITOZA
+ Volume Serial Number is 9488-9499
+
+ Directory of C:\Projects\Brain
+
+12/29/2024  03:24 PM    <DIR>          .
+12/29/2024  10:26 AM    <DIR>          ..
+12/29/2024  11:02 AM    <DIR>          Backend
+12/29/2024  12:27 PM    <DIR>          ChatGPT
+12/21/2024  03:48 PM               437 Clean.bat
+12/29/2024  10:52 AM                94 Commit.bat
+12/29/2024  11:02 AM    <DIR>          Config
+12/29/2024  12:39 PM    <DIR>          Documentation
+12/29/2024  11:02 AM    <DIR>          Frontend
+12/29/2024  11:02 AM    <DIR>          Scripts
+12/29/2024  11:02 AM    <DIR>          Tests
+12/29/2024  12:53 PM    <DIR>          TODO
+12/29/2024  11:02 AM    <DIR>          Tools
+12/29/2024  03:24 PM                 0 _file.txt
+               3 File(s)            531 bytes
+
+ Directory of C:\Projects\Brain\Backend
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  03:24 PM    <DIR>          ..
+12/29/2024  11:02 AM    <DIR>          Core
+12/29/2024  11:02 AM    <DIR>          Extensions
+12/29/2024  11:02 AM    <DIR>          Libraries
+12/29/2024  11:02 AM    <DIR>          Services
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Backend\Core
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+12/29/2024  11:02 AM    <DIR>          Actions
+12/29/2024  11:02 AM    <DIR>          Auth
+12/29/2024  11:02 AM    <DIR>          Context
+12/29/2024  11:02 AM    <DIR>          LoadBalancer
+12/29/2024  11:02 AM    <DIR>          Messages
+12/29/2024  11:02 AM    <DIR>          Monitor
+12/29/2024  11:02 AM    <DIR>          Routing
+12/29/2024  11:02 AM    <DIR>          Templates
+12/29/2024  11:02 AM    <DIR>          Workflows
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Backend\Core\Actions
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Backend\Core\Auth
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Backend\Core\Context
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Backend\Core\LoadBalancer
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Backend\Core\Messages
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Backend\Core\Monitor
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Backend\Core\Routing
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Backend\Core\Templates
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Backend\Core\Workflows
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Backend\Extensions
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+12/29/2024  11:02 AM    <DIR>          CustomWorkflows
+12/29/2024  11:02 AM    <DIR>          Handlers
+12/29/2024  11:02 AM    <DIR>          Plugins
+12/29/2024  11:02 AM    <DIR>          Transformers
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Backend\Extensions\CustomWorkflows
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Backend\Extensions\Handlers
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Backend\Extensions\Plugins
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Backend\Extensions\Transformers
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Backend\Libraries
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+12/29/2024  11:02 AM    <DIR>          Crypto
+12/29/2024  11:02 AM    <DIR>          Storage
+12/29/2024  11:02 AM    <DIR>          Utils
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Backend\Libraries\Crypto
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Backend\Libraries\Storage
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Backend\Libraries\Utils
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Backend\Services
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+12/29/2024  11:02 AM    <DIR>          ActionService
+12/29/2024  11:02 AM    <DIR>          Logger
+12/29/2024  11:02 AM    <DIR>          Manager
+12/29/2024  11:02 AM    <DIR>          MessageService
+12/29/2024  11:02 AM    <DIR>          Simulator
+12/29/2024  11:02 AM    <DIR>          TestService
+12/29/2024  11:02 AM    <DIR>          WorkflowService
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Backend\Services\ActionService
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Backend\Services\Logger
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Backend\Services\Manager
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Backend\Services\MessageService
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Backend\Services\Simulator
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Backend\Services\TestService
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Backend\Services\WorkflowService
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\ChatGPT
+
+12/29/2024  12:27 PM    <DIR>          .
+12/29/2024  03:24 PM    <DIR>          ..
+12/29/2024  12:27 PM             2,093 2024-12-29 12-26 Context.txt
+12/29/2024  10:42 AM             3,150 2024-12-29 Context.txt
+               2 File(s)          5,243 bytes
+
+ Directory of C:\Projects\Brain\Config
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  03:24 PM    <DIR>          ..
+12/29/2024  11:02 AM    <DIR>          Actions
+12/29/2024  11:02 AM    <DIR>          Auth
+12/29/2024  11:02 AM    <DIR>          Global
+12/29/2024  11:02 AM    <DIR>          Messages
+12/29/2024  11:02 AM    <DIR>          Services
+12/29/2024  11:02 AM    <DIR>          Workflows
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Config\Actions
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Config\Auth
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Config\Global
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Config\Messages
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Config\Services
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Config\Workflows
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Documentation
+
+12/29/2024  12:39 PM    <DIR>          .
+12/29/2024  03:24 PM    <DIR>          ..
+12/29/2024  11:02 AM    <DIR>          Backend
+12/29/2024  01:45 PM    <DIR>          Config
+12/29/2024  12:39 PM               592 files.txt
+12/29/2024  11:02 AM    <DIR>          Frontend
+12/29/2024  03:24 PM    <DIR>          Overview
+12/29/2024  11:02 AM    <DIR>          Tools
+               1 File(s)            592 bytes
+
+ Directory of C:\Projects\Brain\Documentation\Backend
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  12:39 PM    <DIR>          ..
+12/29/2024  03:22 PM    <DIR>          Core
+12/29/2024  01:39 PM    <DIR>          Extensions
+12/29/2024  01:37 PM    <DIR>          Libraries
+12/29/2024  03:14 PM    <DIR>          Services
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Documentation\Backend\Core
+
+12/29/2024  03:22 PM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+12/29/2024  01:45 PM             1,696 Backend_Core_Overview.txt
+12/29/2024  03:21 PM             3,036 Dynamic_Context_Management.txt
+12/29/2024  03:21 PM                 0 Graph_Context_Management_with_Neo4j.txt
+               3 File(s)          4,732 bytes
+
+ Directory of C:\Projects\Brain\Documentation\Backend\Extensions
+
+12/29/2024  01:39 PM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+12/29/2024  01:39 PM             2,419 Context_Integration_with_External_Services.txt
+               1 File(s)          2,419 bytes
+
+ Directory of C:\Projects\Brain\Documentation\Backend\Libraries
+
+12/29/2024  01:37 PM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+12/29/2024  01:40 PM             4,524 Graph_Context_Management_with_Neo4j.txt
+               1 File(s)          4,524 bytes
+
+ Directory of C:\Projects\Brain\Documentation\Backend\Services
+
+12/29/2024  03:14 PM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+12/29/2024  03:14 PM             2,485 Error_Handling_Service.txt
+12/29/2024  03:14 PM             2,280 Logger_Service.txt
+               2 File(s)          4,765 bytes
+
+ Directory of C:\Projects\Brain\Documentation\Config
+
+12/29/2024  01:45 PM    <DIR>          .
+12/29/2024  12:39 PM    <DIR>          ..
+12/29/2024  11:02 AM    <DIR>          Actions
+12/29/2024  11:02 AM    <DIR>          Auth
+12/29/2024  01:46 PM             1,904 Config_Overview.txt
+12/29/2024  11:02 AM    <DIR>          Messages
+12/29/2024  11:02 AM    <DIR>          Workflows
+               1 File(s)          1,904 bytes
+
+ Directory of C:\Projects\Brain\Documentation\Config\Actions
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  01:45 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Documentation\Config\Auth
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  01:45 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Documentation\Config\Messages
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  01:45 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Documentation\Config\Workflows
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  01:45 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Documentation\Frontend
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  12:39 PM    <DIR>          ..
+12/29/2024  11:02 AM    <DIR>          ConsoleUI
+12/29/2024  11:02 AM    <DIR>          Shared
+12/29/2024  11:02 AM    <DIR>          WebUI
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Documentation\Frontend\ConsoleUI
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Documentation\Frontend\Shared
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Documentation\Frontend\WebUI
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Documentation\Overview
+
+12/29/2024  03:24 PM    <DIR>          .
+12/29/2024  12:39 PM    <DIR>          ..
+12/29/2024  01:02 PM             3,903 Backend_Core_Actions.txt
+12/29/2024  03:14 PM             3,517 Backend_Core_Overview.txt
+12/29/2024  01:02 PM             3,669 Backend_Overview.txt
+12/29/2024  01:04 PM             3,866 Backend_Services_Overview.txt
+12/29/2024  03:14 PM             3,283 Config_Overview.txt
+12/29/2024  01:19 PM             2,954 Folder_Structure.txt
+12/29/2024  01:07 PM             3,552 Frontend_Overview.txt
+12/29/2024  01:41 PM             2,804 Namespace_Conventions.txt
+12/29/2024  12:50 PM             6,787 Namespace_Hierarchy.txt
+12/29/2024  03:09 PM             4,423 README.md
+12/29/2024  01:26 PM             3,160 System_Overview.txt
+              11 File(s)         41,918 bytes
+
+ Directory of C:\Projects\Brain\Documentation\Tools
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  12:39 PM    <DIR>          ..
+12/29/2024  11:02 AM    <DIR>          Automation
+12/29/2024  11:02 AM    <DIR>          Deployment
+12/29/2024  11:02 AM    <DIR>          Testing
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Documentation\Tools\Automation
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Documentation\Tools\Deployment
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Documentation\Tools\Testing
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Frontend
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  03:24 PM    <DIR>          ..
+12/29/2024  11:02 AM    <DIR>          ConsoleUI
+12/29/2024  11:02 AM    <DIR>          Shared
+12/29/2024  11:02 AM    <DIR>          WebUI
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Frontend\ConsoleUI
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+12/29/2024  11:02 AM    <DIR>          Config
+12/29/2024  11:02 AM    <DIR>          Logs
+12/29/2024  11:02 AM    <DIR>          Views
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Frontend\ConsoleUI\Config
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Frontend\ConsoleUI\Logs
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Frontend\ConsoleUI\Views
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Frontend\Shared
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+12/29/2024  11:02 AM    <DIR>          Assets
+12/29/2024  11:02 AM    <DIR>          Components
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Frontend\Shared\Assets
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Frontend\Shared\Components
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Frontend\WebUI
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+12/29/2024  11:02 AM    <DIR>          Components
+12/29/2024  11:02 AM    <DIR>          Pages
+12/29/2024  11:02 AM    <DIR>          Services
+12/29/2024  11:02 AM    <DIR>          Tests
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Frontend\WebUI\Components
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Frontend\WebUI\Pages
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Frontend\WebUI\Services
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Frontend\WebUI\Tests
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Scripts
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  03:24 PM    <DIR>          ..
+12/29/2024  11:02 AM    <DIR>          Bash
+12/29/2024  10:51 AM    <DIR>          Powershell
+12/29/2024  11:02 AM    <DIR>          Python
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Scripts\Bash
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Scripts\Powershell
+
+12/29/2024  10:51 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+12/29/2024  11:02 AM             4,079 CreateFolders.ps1
+               1 File(s)          4,079 bytes
+
+ Directory of C:\Projects\Brain\Scripts\Python
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Tests
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  03:24 PM    <DIR>          ..
+12/29/2024  11:02 AM    <DIR>          EndToEnd
+12/29/2024  11:02 AM    <DIR>          Functional
+12/29/2024  11:02 AM    <DIR>          Integration
+12/29/2024  11:02 AM    <DIR>          Unit
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Tests\EndToEnd
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Tests\Functional
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Tests\Integration
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Tests\Unit
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\TODO
+
+12/29/2024  12:53 PM    <DIR>          .
+12/29/2024  03:24 PM    <DIR>          ..
+12/29/2024  12:53 PM               871 Initial_Design_Known_Limitations.txt
+               1 File(s)            871 bytes
+
+ Directory of C:\Projects\Brain\Tools
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  03:24 PM    <DIR>          ..
+12/29/2024  11:02 AM    <DIR>          Automation
+12/29/2024  11:02 AM    <DIR>          Deployment
+12/29/2024  11:02 AM    <DIR>          Diagnostics
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Tools\Automation
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Tools\Deployment
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Projects\Brain\Tools\Diagnostics
+
+12/29/2024  11:02 AM    <DIR>          .
+12/29/2024  11:02 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+     Total Files Listed:
+              27 File(s)         71,578 bytes
+             251 Dir(s)  164,396,703,744 bytes free

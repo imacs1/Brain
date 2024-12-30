@@ -1,0 +1,68 @@
+/*
+ * =====================================================================
+ * File:         System_Overview.txt
+ * Folder:       Documentation/Overview
+ * Description:  Provides an overview of the Project Brain system,
+ *               including its architecture, key components, and guiding
+ *               principles.
+ * Author:       Michael G. Lustig
+ * Created On:   2024-12-29 22:10:00 UTC
+ * Last Updated By: Michael G. Lustig
+ * Last Updated: 2024-12-29 22:10:00 UTC
+ * Version:      1.0
+ * Copyright:    (c) 2024 Editoza, LLC - All rights reserved.
+ * =====================================================================
+ */
+
+# System Overview
+
+## Introduction
+The Project Brain system is designed to manage dynamic workflows, actions, and messages in a fully data-driven manner. Leveraging advanced techniques like dynamic routing, RBAC, and proactive monitoring, the system ensures robust performance and adaptability.
+
+## Key Features
+1. **Data-Driven Architecture**:
+   - All routing for actions, workflows, and messages is dynamically determined at runtime.
+   - Reflection and JSON configuration files eliminate hardcoding.
+
+2. **Dynamic Routing Tables**:
+   - Built and maintained by scanning for JSON and code-based handlers.
+   - Automatically updated when services start, stop, or upon periodic checks.
+
+3. **RBAC and Cost Tracking**:
+   - Fine-grained RBAC, including support for time-based access and entitlements.
+   - Cost tracking for message handling and scaling activities.
+
+4. **Cross-Platform Support**:
+   - Designed for compatibility across operating systems, avoiding platform-specific libraries.
+
+## Core Components
+1. **Backend**:
+   - Includes core services like Action, Workflow, Message, Logger, Manager, and Test services.
+   - Integrates Neo4j for graph-based context management and PostgreSQL for relational data.
+
+2. **Frontend**:
+   - Console-based UI with a clean, simple design for managing services, queues, and logs.
+   - Scalable for future web-based interfaces.
+
+3. **Monitoring and Fault Handling**:
+   - Heartbeat mechanisms to monitor service health.
+   - Proactive fault handling and diagnostics for early issue detection.
+
+4. **Crypto and Security**:
+   - Encryption using LibSodium for all configuration and data files.
+   - Comprehensive audit trails with GUIDs for all actions.
+
+## Workflow Design
+- **Actions** are loaded first, followed by **Messages**, and finally **Workflows** to maintain dependency order.
+- Workflows can dynamically chain actions and other workflows to handle complex tasks.
+
+## Scalability and Integration
+- Supports horizontal scaling through lightweight service discovery.
+- Includes gRPC for seamless integration with external services, such as AI modules written in Python.
+
+## Guiding Principles
+1. **Modularity**: Each component is designed for independent operation and easy integration.
+2. **Flexibility**: Dynamic configurations and reflection allow the system to adapt without code changes.
+3. **Security**: All data interactions are encrypted, and strict RBAC ensures secure access.
+
+# End of file

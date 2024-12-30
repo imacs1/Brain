@@ -1,0 +1,34 @@
+/*
+ * =====================================================================
+ * File:         Config_Overview.txt
+ * Folder:       Documentation/Config
+ * Description:  Overview of the configuration setup for Project Brain,
+ *               including how dynamic context fits into configuration management.
+ * Author:       Michael G. Lustig
+ * Created On:   2024-12-29 12:16:00 UTC
+ * Last Updated By: Michael G. Lustig
+ * Last Updated: 2024-12-30 00:15:00 UTC
+ * Version:      1.1
+ * Copyright:    (c) 2024 Editoza, LLC - All rights reserved.
+ * =====================================================================
+ */
+
+## Context Configuration in Project Brain
+
+### 1. Configuring Dynamic Context
+The configuration system in Project Brain includes setup parameters for managing dynamic context. This configuration defines the context entities (e.g., `User`, `Session`, `Task`) and relationships in the system.
+
+#### Context Configuration Items:
+- **Node Configuration**: Each node representing a context entity is configured in the system’s configuration files.
+- **Relationship Configuration**: Relationships between nodes (such as `ASSIGNED_TO`, `PARTICIPATES_IN`) are defined dynamically.
+- **Workflow-Specific Context**: Workflow configurations specify which data should be included in the context for each workflow step.
+
+### 2. Context Versioning and Persistence
+Context data can be persisted in both **temporary** and **persistent** forms, with versioning implemented for traceability and rollback.
+
+- **Versioning**: Context changes are tracked using timestamps and version numbers to ensure continuity and history.
+  
+### 3. Integration with External Services
+Context can be passed to external services via API calls, enabling context-sensitive interactions across various services in Project Brain, such as AI models, third-party APIs, etc.
+
+#End of file
